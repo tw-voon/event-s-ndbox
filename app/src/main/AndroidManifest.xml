@@ -28,7 +28,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="true"
-        tools:replace="android:icon">
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon"
+        tools:targetApi="m">
         <activity android:name=".event_attendees.TakeAttendanceActivity" />
         <activity
             android:name=".event_details.TicketActivity"

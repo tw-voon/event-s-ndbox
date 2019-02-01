@@ -327,5 +327,6 @@
     <string name="title_attendance">Attendance</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="label_no_attendance">Please click on the scan button below to start taking attendance</string>
+    <string name="label_unjoin_event">Leave Event</string>
 
 </resources>

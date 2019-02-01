@@ -1,11 +1,34 @@
 package com.kuchingitsolution.asus.eventmanagement.config;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 public class Helper {
+
+    public static void showMessage(Context context){
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+        alertDialogBuilder.setTitle("Logout");
+        alertDialogBuilder.setMessage("Are you sure want to remove this bookmark ?");
+        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        alertDialogBuilder.show();
+    }
 
     public static long get_time_milli(String time){
         SimpleDateFormat dateFormat = new SimpleDateFormat(

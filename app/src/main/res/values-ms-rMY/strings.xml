@@ -293,5 +293,6 @@
     <string name="food">Makanan</string>
     <string name="home_stay">Home Stay</string>
     <string name="label_no_attendance">Sila click Scan di bawah</string>
+    <string name="label_unjoin_event">Batal</string>
 
 </resources>

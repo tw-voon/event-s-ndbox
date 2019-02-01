@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,7 +20,7 @@ import org.json.JSONObject;
 
 public class TicketActivity extends AppCompatActivity {
 
-    private TextView participant, event_title, event_start_time, event_venue;
+    private TextView participant, event_title, event_start_time, event_venue, close;
     private ImageView qr_ticket;
     private Session session;
     private String event_id;
@@ -42,6 +43,14 @@ public class TicketActivity extends AppCompatActivity {
         event_title = findViewById(R.id.event_title);
         event_start_time = findViewById(R.id.event_start_time);
         event_venue = findViewById(R.id.event_venue);
+        close = findViewById(R.id.close);
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setupData() {
@@ -82,10 +91,10 @@ public class TicketActivity extends AppCompatActivity {
             JSONObject result = new JSONObject(s);
             if(result.optBoolean("success")) {
                 String image_link = Config.IMAGE_CATALOG + result.optJSONObject("data").optString("qrcode");
-                showMessage(image_link);
+                //showMessage(image_link);
                 Glide.with(this).load(image_link).into(qr_ticket);
             } else {
-                showMessage(result.optString("msg"));
+                // showMessage(result.optString("msg"));
             }
         } catch (JSONException e) {
             e.printStackTrace();

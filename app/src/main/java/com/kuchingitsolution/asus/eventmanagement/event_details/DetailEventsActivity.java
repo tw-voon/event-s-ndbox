@@ -427,6 +427,8 @@ public class DetailEventsActivity extends AppCompatActivity implements BaseSlide
                     event_register.setText("JOIN");
                 }
 
+                form_data.put("user_join", raw_data.optInt("user_join"));
+
                 event_register.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -434,8 +436,10 @@ public class DetailEventsActivity extends AppCompatActivity implements BaseSlide
                             display_status("Register period haven't start or expired");
                         } else if(event_register.getText().equals("JOIN"))
                             showMessage("Are you sure want to JOIN this event ?");
-                        else
-                            showMessage("Are you sure want to WITHDRAW from this event ?");
+                        else {
+                            view_ticket();
+                        }
+                            // showMessage("Are you sure want to WITHDRAW from this event ?");
                     }
                 });
             }
@@ -743,7 +747,12 @@ public class DetailEventsActivity extends AppCompatActivity implements BaseSlide
             return true;
         } else if(itemId == R.id.action_more){
             eventDetailsBottomSheet = new EventDetailsBottomSheet();
-            eventDetailsBottomSheet.setData(form_data.optString("event_id"), user_post_data.optString("owner_id"));
+
+            if(session.getKeyValue(Session.ROLE_CODE).equals("5"))
+                eventDetailsBottomSheet.setData(form_data.optString("event_id"), user_post_data.optString("owner_id"), form_data.optString("user_join").equals("1"));
+            else
+                eventDetailsBottomSheet.setData(form_data.optString("event_id"), user_post_data.optString("owner_id"));
+
             eventDetailsBottomSheet.show(getSupportFragmentManager(), "Dialog");
         }
         return super.onOptionsItemSelected(menuItem);
@@ -779,6 +788,21 @@ public class DetailEventsActivity extends AppCompatActivity implements BaseSlide
         intent.putExtra("event_title", form_data.optString("title"));
         intent.putExtra("event_image", form_data.optString("image"));
         startActivity(intent);
+    }
+
+    @Override
+    public void unJoinEvent() {
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage("Are you sure you want to un-join this event ?");
+        alertDialogBuilder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                eventDetailsBottomSheet.dismiss();
+                unjoin_event();
+                dialog.dismiss();
+            }
+        });
+        alertDialogBuilder.show();
     }
 
     @Override

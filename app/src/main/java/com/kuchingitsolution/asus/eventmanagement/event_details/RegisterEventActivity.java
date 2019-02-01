@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -38,7 +39,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.zxing.BarcodeFormat;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
 import com.kuchingitsolution.asus.eventmanagement.R;
 import com.kuchingitsolution.asus.eventmanagement.config.CommonApiAsync;
 import com.kuchingitsolution.asus.eventmanagement.config.Config;
@@ -374,7 +377,7 @@ public class RegisterEventActivity extends AppCompatActivity {
 
         switch (type){
             case "register_user":
-                showMessage(result);
+                // showMessage(result);
                 parse_register_event(result);
                 break;
         }
@@ -387,7 +390,7 @@ public class RegisterEventActivity extends AppCompatActivity {
             JSONObject response = new JSONObject(result);
 
             if(response.optBoolean("success")){
-                display_status(response.optString("data"));
+                // display_status(response.optString("data"));
                 JSONObject data = new JSONObject(response.optString("data"));
                 this.generate_qrcode(data.optString("user_id"), data.optString("id"));
                 this.gatherInfo(data.optString("user_id"), data.optString("id"), data.optString("event_id"));
@@ -410,7 +413,14 @@ public class RegisterEventActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         // display response
                         Log.d("Response", response.toString());
-                        showMessage(response.toString());
+                        display_status("Successfully register");
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                onBackPressed();
+                            }
+                        }, 1000); // Millisecond 1000 = 1 sec
                     }
                 },
                 new Response.ErrorListener()
@@ -418,7 +428,8 @@ public class RegisterEventActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Error.Response", error.toString());
-                        showMessage(error.toString());
+                        display_status("Error during the registration");
+                        // showMessage(error.toString());
                     }
                 }
         );
@@ -431,12 +442,20 @@ public class RegisterEventActivity extends AppCompatActivity {
         }
     }
 
+
+
     private void generate_qrcode(String user_id, String attendee_id) {
-        this.bmp = QRCodeHelper.newInstance(this)
-                .setContent(String.format("{user_id: %s, attendee_id: %s}", user_id, attendee_id))
-                .setWidthAndHeight(250, 250)
-                .setErrorCorrectionLevel(ErrorCorrectionLevel.Q)
-                .getQRCOde();
+//        this.bmp = QRCodeHelper.newInstance(this)
+//                .setContent(String.format("{user_id: %s, attendee_id: %s}", user_id, attendee_id))
+//                .setWidthAndHeight(250, 250)
+//                .setErrorCorrectionLevel(ErrorCorrectionLevel.Q)
+//                .getQRCOde();
+        try {
+            BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
+            this.bmp = barcodeEncoder.encodeBitmap(String.format("{user_id: %s, attendee_id: %s}", user_id, attendee_id), BarcodeFormat.QR_CODE, 500, 500);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void gatherInfo(String user_id, String attendee_id, String event_id) {

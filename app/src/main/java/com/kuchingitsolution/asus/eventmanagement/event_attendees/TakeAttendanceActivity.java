@@ -88,6 +88,7 @@ public class TakeAttendanceActivity extends AppCompatActivity {
 
         //intializing scan object
         qrScan = new IntentIntegrator(this);
+        qrScan.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
         qrScan.setBeepEnabled(false);
         qrScan.setBarcodeImageEnabled(true);
         qrScan.setOrientationLocked(false);

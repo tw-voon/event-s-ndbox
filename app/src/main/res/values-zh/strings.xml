@@ -309,5 +309,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="home_stay">Home Stay</string>
     <string name="label_no_attendance">请点击下面的扫描按钮</string>
+    <string name="label_unjoin_event">取消门票</string>
 
 </resources>

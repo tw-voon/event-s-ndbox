@@ -13,14 +13,21 @@ import static android.view.View.GONE;
 
 public class EventDetailsBottomSheet extends BottomSheetDialogFragment {
 
-    String event_id, owner_id;
-    private LinearLayout edit_post, contact_officer, assign_officer, event_view_feedback , event_feedback, btn_add_to_calender, delete_post, btn_invite_vip, btn_take_attendance;
+    String event_id, owner_id, user_join;
+    Boolean isUserJoin = false;
+    private LinearLayout edit_post, contact_officer, assign_officer, event_view_feedback , event_feedback, btn_add_to_calender, delete_post, btn_invite_vip, btn_take_attendance, btn_unjoin_event;
     private OptionBottomSheetCallback optionBottomSheetCallback;
     private Session session;
 
     public void setData(String event_id, String owner_id){
         this.event_id = event_id;
         this.owner_id = owner_id;
+    }
+
+    public void setData(String event_id, String owner_id, Boolean isUserJoin){
+        this.event_id = event_id;
+        this.owner_id = owner_id;
+        this.isUserJoin = isUserJoin;
     }
 
     @SuppressLint("RestrictedApi")
@@ -41,12 +48,14 @@ public class EventDetailsBottomSheet extends BottomSheetDialogFragment {
         btn_invite_vip = dialog.findViewById(R.id.btn_invite_vip);
         event_view_feedback = dialog.findViewById(R.id.view_feedback);
         btn_take_attendance = dialog.findViewById(R.id.btn_take_attendance);
+        btn_unjoin_event = dialog.findViewById(R.id.btn_unjoin_event);
 
         String user_id = session.getKeyValue(Session.USER_ID);
         String roles_id = session.getKeyValue(Session.ROLE_CODE);
         delete_post.setVisibility(GONE);
         edit_post.setVisibility(GONE);
         btn_take_attendance.setVisibility(GONE);
+        btn_unjoin_event.setVisibility(GONE);
 
         switch (roles_id){
 
@@ -100,6 +109,13 @@ public class EventDetailsBottomSheet extends BottomSheetDialogFragment {
             @Override
             public void onClick(View view) {
                 optionBottomSheetCallback.addCalender();
+            }
+        });
+
+        btn_unjoin_event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                optionBottomSheetCallback.unJoinEvent();
             }
         });
     }
@@ -173,6 +189,10 @@ public class EventDetailsBottomSheet extends BottomSheetDialogFragment {
         event_view_feedback.setVisibility(GONE);
         contact_officer.setVisibility(GONE);
 
+        if(this.isUserJoin) {
+            btn_unjoin_event.setVisibility(View.VISIBLE);
+        }
+
     }
 
     private void setup_usahawan_element(){
@@ -194,5 +214,6 @@ public class EventDetailsBottomSheet extends BottomSheetDialogFragment {
         void view_feedback();
         void delete_post();
         void editPost();
+        void unJoinEvent();
     }
 }
