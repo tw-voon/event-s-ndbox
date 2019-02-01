@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "830232438042",
+    "project_id": "event-management-a24bf"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830232438042:android:85af4ea299b2dd48",
+        "android_client_info": {
+          "package_name": "com.kuchingitsolution.asus.eventmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830232438042-j806h1jte8qksoqun5g8eh2kf98h82bf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kuchingitsolution.asus.eventmanagement",
+            "certificate_hash": "a3ba79c22a647ecaa851d13c8dd3b88c924b70a0"
+          }
+        },
+        {
+          "client_id": "830232438042-91ku382n8m01ggce9r5f8ab38uieqddk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4KRaLDjefODrcg1zFXVS2RhB54vetOx8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

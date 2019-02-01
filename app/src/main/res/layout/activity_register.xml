@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/register_layout"
+    tools:context="com.kuchingitsolution.asus.eventmanagement.auth.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:drawableStart="@drawable/logo_fs_2"
+            android:drawablePadding="10dp"
+            android:textSize="36sp"
+            android:textColor="@color/colorBg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorBg"
+            android:text="@string/form_username"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:id="@+id/edtUsername"
+            android:labelFor="@id/edtUsername"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBg"
+            android:text="@string/form_email"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:id="@+id/edtEmail"
+            android:labelFor="@id/edtEmail"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBg"
+            android:text="@string/form_password"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtPassword"
+            android:labelFor="@id/edtPassword"
+            android:inputType="textPassword"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBg"
+            android:text="@string/form_password_again"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtPasswordAgn"
+            android:labelFor="@id/edtPassword"
+            android:inputType="textPassword"/>
+
+        <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/form_register"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/login_btn"
+            android:text="@string/form_next"
+            android:textColor="@color/colorWhite"
+            app:spinning_bar_width="4dp"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/form_have_account"
+            android:textAlignment="center"
+            android:textColor="@color/colorBg"
+            android:id="@+id/forgot_password"
+            android:onClick="to_login"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

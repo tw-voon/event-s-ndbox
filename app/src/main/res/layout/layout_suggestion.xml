@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/suggestionText"
+        android:text="Spa"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content" />
+
+</android.support.v7.widget.CardView>

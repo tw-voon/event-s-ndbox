@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kuchingitsolution.asus.eventmanagement">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.hardware.camera" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:name=".EventManagementApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
+        tools:replace="android:icon">
+        <activity android:name=".event_attendees.TakeAttendanceActivity" />
+        <activity
+            android:name=".event_details.TicketActivity"
+            android:theme="@style/AppTheme.TransparentWindow" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.kuchingitsolution.asus.eventmanagement.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".HomeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="kuchingitsolution.net"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".new_event.NewEventActivity"
+            android:label="@string/title_add_event"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
+        <activity android:name=".new_event.CategoryActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_keys" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".auth.LoginActivity" />
+        <activity
+            android:name=".my_event.MyEventActivity"
+            android:label="@string/event_title"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
+        <activity
+            android:name=".event_details.DetailEventsActivity"
+            android:label="@string/title_activity_detail_events"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ImageFullScreenActivity"
+            android:label="@string/title_activity_detail_events"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".event_details.DetailEventsActivity" />
+        </activity>
+        <activity
+            android:name=".map.ActivityViewOnMap"
+            android:label="@string/title_activity_detail_events"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".event_details.DetailEventsActivity" />
+        </activity>
+        <activity
+            android:name=".my_account.MyAccountActivity"
+            android:label="@string/my_account"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
+        <activity android:name=".officer.MyOfficerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".my_account.MyAccountActivity" />
+        </activity>
+        <activity
+            android:name=".officer.SearchOfficerActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name=".bookmark.BookmarkActivity" />
+        <activity android:name=".message.MessageActivity" />
+        <activity android:name=".message.ChatActivity" />
+        <activity android:name=".officer.AssignOfficerActivity" />
+        <activity android:name=".auth.RegisterActivity" />
+        <activity
+            android:name=".event_vip.EventVipActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name=".feedback_manager.FeedbackManagerActivity" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name=".profile.MyProfileActivity" />
+
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+
+        <activity android:name=".officer_task.OfficerTaskActivity" />
+        <activity android:name=".apps_info.AppsInfoActivity" />
+        <activity android:name=".auth.ForgotPasswordActivity" />
+        <activity android:name=".event_attendees.ParticipantActivity" />
+        <activity android:name=".setting.SettingActivity" />
+        <activity android:name=".new_event.InformationActivity" />
+        <activity android:name=".InfoPost.InfoPostActivity" />
+        <activity android:name=".JoinEventActivity" />
+        <activity
+            android:name=".auth.MoreInfoActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".event_details.RegisterEventActivity" />
+        <activity android:name=".profile.CountryStateActivity" />
+        <activity
+            android:name=".profile.AddressActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".marketplace.MarketplaceMainActivity" />
+        <activity android:name=".marketplace.SearchActivity" />
+        <activity android:name=".marketplace.BidActivity" />
+        <activity android:name=".marketplace.SearchResultActivity" />
+        <activity android:name=".marketplace.ProductDetailsActvity" />
+        <activity android:name=".marketplace.DetailedActivity" />
+        <activity android:name=".new_event.EditEventActivity" />
+    </application>
+
+</manifest>

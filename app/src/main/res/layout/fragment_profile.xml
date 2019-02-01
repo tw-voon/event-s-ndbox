@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mt_gray5"
+    android:paddingBottom="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Profile section -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/profile_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="3dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/title_account"
+                    android:src="@drawable/profile_sample"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/username"
+                    android:gravity="center_horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/label_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:text="@string/title_account_section"/>
+
+        <android.support.v7.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="3dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Profile details -->
+                <LinearLayout
+                    android:id="@+id/bookmark_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/bookmark_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/baseline_bookmark_black_24"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/title_bookmark" />
+
+                    <TextView
+                        android:id="@+id/bookmark_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="end"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/view_bookmark"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/new_event_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:visibility="gone"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/new_event_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/baseline_add_circle_black_24"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/title_add_event" />
+
+                    <TextView
+                        android:id="@+id/new_event_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="end"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/add_event"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/event_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:visibility="gone"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/event_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/baseline_description_black_24"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/title_event" />
+
+                    <TextView
+                        android:id="@+id/event_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/view_event"
+                        android:textAlignment="viewEnd"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/event_task_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:visibility="gone"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/event_officer_task"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/baseline_description_black_24"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/title_task" />
+
+                    <TextView
+                        android:id="@+id/event_task_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/view_event"
+                        android:textAlignment="viewEnd"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/joined_event_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:visibility="gone"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/event_joined_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/baseline_description_black_24"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/title_joined_event" />
+
+                    <TextView
+                        android:id="@+id/event_joined_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/view_event"
+                        android:textAlignment="viewEnd"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/account_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/account_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/baseline_account_circle_black_24"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/title_account" />
+
+                    <TextView
+                        android:id="@+id/account_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/view_account"
+                        android:textAlignment="viewEnd"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

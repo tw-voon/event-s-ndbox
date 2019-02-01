@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            app:cardCornerRadius="15dp">
+
+
+            <ImageView
+                android:id="@+id/bidUserImage"
+                android:src="@drawable/model"
+                android:scaleType="centerCrop"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/bidUserName"
+                    android:text="Nur Cahaya"
+                    android:maxWidth="100dp"
+                    android:maxLines="2"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/bidEditBid"
+                    android:layout_marginLeft="5dp"
+                    android:text="Edit Bid"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    android:layout_gravity="top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:textSize="10sp"
+                android:textColor="#78849E"
+                android:text="Kuching, Sarawak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/bidPrice"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Bid RM 5.00"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/bidHighestTag"
+            android:visibility="gone"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/gradient_redorange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="10sp"
+                android:textColor="@android:color/white"
+                android:text="Highest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

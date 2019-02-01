@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rating_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rating_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="12sp"
+                android:id="@+id/feedback_user"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/feedback_timestamp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/mt_black"
+                android:text="@string/dummy_short"
+                android:paddingBottom="10dp"
+                android:id="@+id/feedback_content" />
+
+            <android.support.v7.widget.AppCompatRatingBar
+                android:id="@+id/feedback_rating"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:isIndicator="true"
+                android:max="5"
+                android:numStars="5"
+                android:rating="5"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:stepSize="0.1"
+                android:theme="@style/RatingBar" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

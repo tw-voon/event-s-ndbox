@@ -1,0 +1,313 @@
+<resources>
+    <string name="app_name">活动管理</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">目录</string>
+    <string name="title_notifications">通知</string>
+
+    <!-- Officer page management -->
+    <string name="new_officer">添加执行员</string>
+    <string name="no_result">无搜寻</string>
+    <string name="action_search">查找</string>
+    <string name="assign_officer">添加活动执行人</string>
+
+    <!-- No result section -->
+    <string name="no_bookmark">无标签 </string>
+
+    <!-- Login page -->
+    <string name="form_username">用户名</string>
+    <string name="form_password">密码</string>
+    <string name="form_password_again">确认密码</string>
+    <string name="form_login">登录</string>
+    <string name="form_reset">发送密码重置链接</string>
+    <string name="form_register">注册</string>
+    <string name="form_no_account">还没有户口?</string>
+    <string name="form_forgot_password">忘记密码 ?</string>
+    <string name="form_back_to_login">回到登录页</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="form_have_account">已经有用户户口 ? </string>
+    <string name="form_email">电子邮件</string>
+    <string name="form_input_email">请输入您的登录电子邮件</string>
+    <string name="form_phone">联络号码</string>
+    <string name="form_logout">登出</string>
+    <string name="no_content">没有内容</string>
+    <string name="logging_in">正在登录 </string>
+
+    <!-- Google API key -->
+    <string name="google_api_keys">AIzaSyA4KRaLDjefODrcg1zFXVS2RhB54vetOx8</string>
+
+    <!-- Page title -->
+    <string name="title_feed">活动</string>
+    <string name="title_Message">信息</string>
+    <string name="title_Profile">我的资料</string>
+    <string name="title_notification">通知</string>
+    <string name="title_account">我的户口</string>
+    <string name="title_history">历史纪录</string>
+    <string name="title_my_wish">愿望清单</string>
+    <string name="title_info">应用资料</string>
+    <string name="title_bookmark">我的标签</string>
+    <string name="title_event">我的活动</string>
+    <string name="title_add_event">添加新活动</string>
+    <string name="title_task">我的任务</string>
+    <string name="title_joined_event">参加的活动</string>
+    <string name="title_account_section">部分 </string>
+    <string name="title_category">请选择类别 </string>
+
+    <!-- User Profile -->
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="email">电子邮件</string>
+    <string name="view_history">观看你的历史纪录</string>
+    <string name="log_out">登出</string>
+    <string name="view_event">查阅活动</string>
+    <string name="about_app">关于我们</string>
+    <string name="add_event">添加新活动</string>
+    <string name="view_task">查阅你的任务</string>
+    <string name="view_bookmark">查阅你的标签</string>
+    <string name="view_account">查阅你的户口</string>
+    <string name="logout_label">登出</string>
+    <string name="logout_status">登出应用</string>
+    <string name="tap_change">点击更换</string>
+    <string name="email_change">无法更换电子邮件</string>
+    <string name="username_status">成功更换了您的用户名</string>
+    <string name="password_status">成功更换了您的密码</string>
+    <string name="my_officer">我的执行员</string>
+    <string name="pending_officer">执行员请求清单</string>
+    <string name="assign_event_officer">您确定要将此活动分配给此执行员吗?</string>
+
+    <!-- Feed -->
+    <string name="like">喜爱</string>
+    <string name="bookmark">标签</string>
+    <string name="join">参加</string>
+    <string name="interest">兴趣</string>
+    <string name="comment">评论</string>
+    <string name="status_running">进行中</string>
+    <string name="status_completed">完成</string>
+
+    <!-- Dummy string -->
+    <string name="text_no_vip">No VIP found associate with this email. If you wish to add this VIP, Please click the send Invitation button below.</string>
+    <string name="action_send_invite">Send Invitation</string>
+    <string name="action_search_result">Search result</string>
+    <string name="label_invited_vip">Invited VIP</string>
+
+    <!-- My Account -->
+    <string name="officer_label">活动执行人 </string>
+    <string name="manage_officer">管理执行人</string>
+    <string name="my_account">我的户口</string>
+    <string name="edit_profile">我的个人资料</string>
+    <string name="support_label">资讯</string>
+    <string name="apps_info">应用资讯</string>
+    <string name="apps_contact">寻求联系</string>
+    <string name="logout">登出</string>
+    <string name="setting_label">设定</string>
+    <string name="setting_app_label">应用设定</string>
+    <string name="edit_language">语言</string>
+    <string name="logout_desc">确定要登出吗?</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+
+    <!-- Details feed -->
+    <string name="extra_info">更多资讯 </string>
+    <string name="organiser">活动主办人 </string>
+    <string name="organiser_name">主办人</string>
+    <string name="action_enter_comment">请写下你的评论</string>
+    <string name="action_send">发送</string>
+    <string name="action_more">反馈</string>
+    <string name="btn_edit">编辑帖子</string>
+    <string name="btn_feedback">反馈</string>
+    <string name="btn_view_feedback">查阅反馈</string>
+    <string name="btn_officer">委任执行员</string>
+    <string name="btn_contact_officer">联络执行人</string>
+    <string name="btn_assign_vip">邀请 VIP</string>
+    <string name="btn_delete_post">删除帖子</string>
+    <string name="btn_add_calendar">添加到日历</string>
+
+    <!-- New feed -->
+    <string name="event_title">活动标题</string>
+    <string name="event_description">活动内容</string>
+    <string name="event_extra">更多资讯 (Optional)</string>
+    <string name="event_location">活动地点</string>
+    <string name="event_images">活动照片</string>
+    <string name="pick_images">请选择活动照片</string>
+    <string name="pick_location">请选择活动地点</string>
+    <string name="event_category">类别</string>
+    <string name="pick_category">请选择活动类别</string>
+    <string name="event_start">活动开始时间</string>
+    <string name="pick_event_start">请选择开始时间</string>
+    <string name="event_end">活动结束时间</string>
+    <string name="pick_event_end">请选择活动结束时间</string>
+    <string name="submit">提交</string>
+    <string name="take_photo">相机</string>
+    <string name="gallery">图库</string>
+    <string name="add_photo">添加照片</string>
+
+    <!-- Message -->
+    <string name="search_person">查找</string>
+    <string name="message_list">信息目录</string>
+
+    <!-- Instruction -->
+    <string name="my_officer_title">执行人目录</string>
+    <string name="my_officer_desc">如果想要添加新执行员请按右上角.当添加后您必须请等待该执行员接受这项委托才能正真成为您的活动执行员.</string>
+
+    <!-- Dummy text -->
+    <string name="dummy">Lorem ipsum is a pseudo-Latin text used in web design,
+        typography, layout, and printing in place of English to emphasise design elements over
+        content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for
+        mock-ups. It helps to outline the visual elements of a document or presentation, eg
+        typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical
+        author and philosopher Cicero. Its words and letters have been changed by addition or
+        removal, so to deliberately render its content nonsensical; it\'s not genuine, correct,
+        or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin,
+        it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K,
+        W, or Z, alien to latin, these, and others are often inserted randomly to mimic the
+        typographic appearance of European languages, as are digraphs not to be found in the original.
+        In a professional context it often happens that private or corporate clients coder a
+        publication to be made and presented with the actual content still not being ready.
+        Think of a news blog that\'s filled with content hourly on the day of going live.
+        However, reviewers tend to be distracted by comprehensible content, say, a random text
+        copied from a newspaper or the internet. The are likely to focus on the text,
+        disregarding the layout and its elements. Besides, random text risks to be unintended
+        humorous or offensive, an unacceptable risk in corporate environments.
+        Lorem ipsum and its many variants have been employed since the early 1960ies, and quite
+        likely since the sixteenth century.</string>
+
+    <string name="dummy_short">Lorem ipsum is a pseudo-Latin text used in web design,
+        typography, layout, and printing in place of English to emphasise design elements over
+        content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for
+        mock-ups. It helps to outline the visual elements of a document or presentation, eg
+        typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical
+        author and philosopher Cicero.</string>
+
+    <string name="sample_location">现在所在地点 </string>
+    <string name="sample_status">3 Bookmarked Event </string>
+    <string name="title_activity_detail_events">DetailEventsActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">设定</string>
+    <string name="form_next">下一步</string>
+    <string name="form_more_info1">在开始前只须多点信息</string>
+    <string name="form_more_info">帮助我们更加了解您</string>
+    <string name="form_address_line_1">第一行 地址</string>
+    <string name="form_address_line_2">第二行 地址</string>
+    <string name="form_mobile">电话号码</string>
+    <string name="form_dob">生日日期</string>
+    <string name="form_city">城市</string>
+    <string name="form_state">州属</string>
+    <string name="form_postcode">邮政编码</string>
+    <string name="form_country">国家</string>
+    <string name="form_gender">性别</string>
+    <string name="form_male">男</string>
+    <string name="form_female">女</string>
+    <string name="form_register_detail">注册详情</string>
+    <string name="register_events_term">我同意活动管理可以与活动组织者分享我的信息</string>
+    <string name="title_marketplace">商城</string>
+    <string name="info_event_label">类别</string>
+    <string name="btn_joined_events">加入了</string>
+    <string name="btn_join_events">加入</string>
+    <string name="event_register_start">注册开始</string>
+    <string name="pick_event_start_dateline">注册开始日期</string>
+    <string name="event_register_end">注册结束</string>
+    <string name="pick_event_end_dateline">注册结束日期</string>
+    <string name="info_title">标题</string>
+    <string name="info_desc">详情</string>
+    <string name="extra_information">额外信息</string>
+    <string name="information_venue">地点</string>
+    <string name="pick_info_images">请选择您的照片</string>
+    <string name="pick_info_location">请选择您的地点</string>
+    <string name="info_category">类别</string>
+    <string name="pick_info_category">请选择您的类别</string>
+    <string name="choose_posting_type">请选择您要发布的信息类别</string>
+    <string name="description_item">An ice cream that is made up from Sarawak original gula apong where it is very sweet and really delicious</string>
+    <string name="title_attendance">出席</string>
+    <string name="food">食物</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="home_stay">Home Stay</string>
+    <string name="label_no_attendance">请点击下面的扫描按钮</string>
+
+</resources>

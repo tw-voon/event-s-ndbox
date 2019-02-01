@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:src="@drawable/gulaapong"
+        android:id="@+id/daimajia_slider_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/layerA"
+        android:background="#77000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layerB"
+        android:background="@drawable/gradient"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="5dp"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:text="100% Made in Sarawak "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/loading_bar"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/description_layout"
+        android:layout_alignParentBottom="true"
+        android:minHeight="30dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/description"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/info"
+            android:textSize="10sp"
+            android:layout_marginBottom="18dp"
+            android:textColor="#8F9EAD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="4dp"
+            android:layout_marginBottom="8dp">
+
+
+            <ImageView
+                android:id="@+id/previousOrderItemImage"
+                android:src="@drawable/gula_apong"
+                android:scaleType="centerCrop"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/previousBidName"
+                    android:text="Pior Gula Apong"
+                    android:textStyle="bold"
+                    android:maxLines="2"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:text="16/4/2018 9.00 a.m."
+                    android:textSize="10sp"
+                    android:gravity="end"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_user_black"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/black"
+                    android:text="20 People"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_money_black"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/black"
+                    android:text="RM 3.00 - RM 8.00"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:paddingTop="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="10sp"
+                        android:textColor="@android:color/white"
+                        android:text="Show Biddings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

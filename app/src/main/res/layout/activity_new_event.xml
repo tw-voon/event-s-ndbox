@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_event"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.kuchingitsolution.asus.eventmanagement.new_event.NewEventActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/ToolBarStyle.Event"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#ffffff"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/image_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:layout_below="@id/image_row"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="10dp">
+
+                        <EditText
+                            android:id="@+id/event_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:hint="@string/event_title" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="10dp">
+
+                        <EditText
+                            android:id="@+id/event_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/event_description"
+                            android:inputType="textMultiLine"
+                            android:maxLines="10"
+                            android:scrollbars="vertical"
+                            android:textSize="14sp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="10dp">
+
+                        <EditText
+                            android:id="@+id/event_extra_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/event_extra"
+                            android:inputType="textMultiLine"
+                            android:maxLines="10"
+                            android:textSize="14sp"
+                            android:scrollbars="vertical" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pick_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/details"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/baseline_list_black_18"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/event_category" />
+
+                    <TextView
+                        android:id="@+id/selected_category"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/pick_category"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pick_date_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pick_category"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/pick_start_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:drawablePadding="10dp"
+                            android:drawableStart="@drawable/baseline_access_time_black_18"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:text="@string/event_start" />
+
+                        <TextView
+                            android:id="@+id/start_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:hint="@string/pick_event_start"
+                            android:textAlignment="textEnd" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pick_end_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:drawablePadding="10dp"
+                            android:drawableStart="@drawable/baseline_access_time_black_18"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:text="@string/event_end" />
+
+                        <TextView
+                            android:id="@+id/end_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:hint="@string/pick_event_end"
+                            android:textAlignment="textEnd" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pick_registration_section"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pick_date_section"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/pick_start_dateline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:drawablePadding="10dp"
+                            android:drawableStart="@drawable/baseline_access_time_black_18"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:text="@string/event_register_start" />
+
+                        <TextView
+                            android:id="@+id/start_dateline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:hint="@string/pick_event_start_dateline"
+                            android:textAlignment="textEnd" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pick_end_dateline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:drawablePadding="10dp"
+                            android:drawableStart="@drawable/baseline_access_time_black_18"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:text="@string/event_register_end" />
+
+                        <TextView
+                            android:id="@+id/end_dateline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:hint="@string/pick_event_end_dateline"
+                            android:textAlignment="textEnd" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pickLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pick_registration_section"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/baseline_location_on_black_18"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/pick_location" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/mt_gray3"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/location_preview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/add_event"
+                        android:scaleType="centerCrop"
+                        android:src="@color/mt_gray1"
+                        android:visibility="gone" />
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/avi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:indicatorName="BallScaleMultipleIndicator"
+                        app:indicatorColor="@color/mt_gray3"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

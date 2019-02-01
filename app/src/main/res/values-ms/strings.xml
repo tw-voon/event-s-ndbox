@@ -1,0 +1,313 @@
+<resources>
+    <string name="app_name">Pengurusan Acara</string>
+    <string name="title_home">Halaman</string>
+    <string name="title_dashboard">Papan Pemuka</string>
+    <string name="title_notifications">Notifikasi</string>
+
+    <!-- Officer page management -->
+    <string name="new_officer">Tambah pegawai baru</string>
+    <string name="no_result">Tiada carian</string>
+    <string name="action_search">Cari</string>
+    <string name="assign_officer">Menugaskan pegawai kepada acara</string>
+
+    <!-- No result section -->
+    <string name="no_bookmark">Tiada penanda </string>
+
+    <!-- Login page -->
+    <string name="form_username">Name Pengguna</string>
+    <string name="form_password">Kata Laluan</string>
+    <string name="form_password_again">Sahkan Kata Laluan </string>
+    <string name="form_login">Log Masuk</string>
+    <string name="form_reset">Hantar pautan taipkan semula kata laluan</string>
+    <string name="form_register">Daftar</string>
+    <string name="form_no_account">Tidak mempunyai akaun ?</string>
+    <string name="form_forgot_password">Lupa kata laluan ?</string>
+    <string name="form_back_to_login">Kembali ke log masuk</string>
+    <string name="confirm_password">Kata laluan lagi</string>
+    <string name="form_have_account">Sudah mempunyai akaun ? </string>
+    <string name="form_email">E-mel</string>
+    <string name="form_input_email">Sila masukkan e-mel anda</string>
+    <string name="form_phone">No. telephone</string>
+    <string name="form_logout">Log keluan</string>
+    <string name="no_content">Tiada kandungan</string>
+    <string name="logging_in">Logging masuk </string>
+
+    <!-- Google API key -->
+    <string name="google_api_keys">AIzaSyA4KRaLDjefODrcg1zFXVS2RhB54vetOx8</string>
+
+    <!-- Page title -->
+    <string name="title_feed">Acara</string>
+    <string name="title_Message">Mesej</string>
+    <string name="title_Profile">Profil</string>
+    <string name="title_notification">Notifikasi</string>
+    <string name="title_account">Akaun</string>
+    <string name="title_history">Sejarah</string>
+    <string name="title_my_wish">Acara yang disukai</string>
+    <string name="title_info">Maklumat Aplikasi</string>
+    <string name="title_bookmark">Baca kemudian</string>
+    <string name="title_event">Acara</string>
+    <string name="title_add_event">Acara baru</string>
+    <string name="title_task">Tugas</string>
+    <string name="title_joined_event">Acara yang saya sertai</string>
+    <string name="title_account_section">Seksyen </string>
+    <string name="title_category">Sila pilih kategori </string>
+
+    <!-- User Profile -->
+    <string name="username">Name Pengguna</string>
+    <string name="password">Kata Laluan</string>
+    <string name="email">E-mel</string>
+    <string name="view_history">Sejarah</string>
+    <string name="log_out">Log Keluan</string>
+    <string name="view_event">Lihat acara anda</string>
+    <string name="about_app">Tentang kita</string>
+    <string name="add_event">Tambah acara baru</string>
+    <string name="view_task">Lihat tugas anda</string>
+    <string name="view_bookmark">Baca kemudian</string>
+    <string name="view_account">Lihat akaun anda</string>
+    <string name="logout_label">Log keluan</string>
+    <string name="logout_status">Log keluan dari aplikasi</string>
+    <string name="tap_change">Klik untuk tukar</string>
+    <string name="email_change">E-mal tidak dapat ditukar</string>
+    <string name="username_status">Berjaya menukarkan nama pengguna anda </string>
+    <string name="password_status">Berjaya menukarkan kata laluan anda</string>
+    <string name="my_officer">Pegawai Saya</string>
+    <string name="pending_officer">Belum Terima</string>
+    <string name="assign_event_officer">Adakah anda ingin menugaskan pegawai tersebut untuk acara ini ?</string>
+
+    <!-- Feed -->
+    <string name="like">Suka</string>
+    <string name="bookmark">Baca kemudian</string>
+    <string name="join">Menyertai</string>
+    <string name="interest">Minat</string>
+    <string name="comment">Komen</string>
+    <string name="status_running">BERTERUSAN</string>
+    <string name="status_completed">TAMAT</string>
+
+    <!-- Dummy string -->
+    <string name="text_no_vip">No VIP found associate with this email. If you wish to add this VIP, Please click the send Invitation button below.</string>
+    <string name="action_send_invite">Send Invitation</string>
+    <string name="action_search_result">Search result</string>
+    <string name="label_invited_vip">Invited VIP</string>
+
+    <!-- My Account -->
+    <string name="officer_label">Pegawai acara </string>
+    <string name="manage_officer">Mengurus pegawai</string>
+    <string name="my_account">Akaun</string>
+    <string name="edit_profile">Profil</string>
+    <string name="support_label">Sokongan </string>
+    <string name="apps_info">Maklumat aplikasi</string>
+    <string name="apps_contact">Menhubingi</string>
+    <string name="logout">Log keluar</string>
+    <string name="setting_label">Penetapan</string>
+    <string name="setting_app_label">Tetapan aplikasi</string>
+    <string name="edit_language">Bahasa</string>
+    <string name="logout_desc">Adakah anda ingin log keluar?</string>
+    <string name="confirm">Betul</string>
+    <string name="cancel">Batal</string>
+
+    <!-- Details feed -->
+    <string name="extra_info">Maklumat tambahan </string>
+    <string name="organiser">Penganjur </string>
+    <string name="organiser_name">Name penganjur </string>
+    <string name="action_enter_comment">Sila masukkan komen disini</string>
+    <string name="action_send">Hantar</string>
+    <string name="action_more">Maklum balas</string>
+    <string name="btn_edit">Edit pos</string>
+    <string name="btn_feedback">Maklum balas</string>
+    <string name="btn_view_feedback">Baca maklum balas</string>
+    <string name="btn_officer">Menugaskan pegawai</string>
+    <string name="btn_contact_officer">Hubungi Pegawai </string>
+    <string name="btn_assign_vip">Invite VIP</string>
+    <string name="btn_delete_post">Padam pos </string>
+    <string name="btn_add_calendar">Tambah ke kalender </string>
+
+    <!-- New feed -->
+    <string name="event_title">Tajuk acara</string>
+    <string name="event_description">Keterangan acara</string>
+    <string name="event_extra">Maklumat tambahan (Tidak diwajibkan)</string>
+    <string name="event_location">Lokasi acara</string>
+    <string name="event_images">Imej acara</string>
+    <string name="pick_images">Sila pilih imej acara anda</string>
+    <string name="pick_location">Sila pilih lokasi acara anda</string>
+    <string name="event_category">Kategori</string>
+    <string name="pick_category">Sila pilih kategori acara anda</string>
+    <string name="event_start">Acara bermula </string>
+    <string name="pick_event_start">Sila pilih masa bermula acara anda </string>
+    <string name="event_end">Acara tamat</string>
+    <string name="pick_event_end">Sila pilih masa tamat acara anda </string>
+    <string name="submit">Hantar</string>
+    <string name="take_photo">Ambil gambar</string>
+    <string name="gallery">Pilih dari galeri</string>
+    <string name="add_photo">Tambah gambar</string>
+
+    <!-- Message -->
+    <string name="search_person">Cari</string>
+    <string name="message_list">Mesej</string>
+
+    <!-- Instruction -->
+    <string name="my_officer_title">Senarai Pegawai</string>
+    <string name="my_officer_desc"> Sila klik atas sebelah kanan untuk menambah pegawai baru. Sekira pegawai baru ditambah, anda harus menunggu sampai pegawai tersebut menerima permintaan tersebut.</string>
+
+    <!-- Dummy text -->
+    <string name="dummy">Lorem ipsum is a pseudo-Latin text used in web design,
+        typography, layout, and printing in place of English to emphasise design elements over
+        content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for
+        mock-ups. It helps to outline the visual elements of a document or presentation, eg
+        typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical
+        author and philosopher Cicero. Its words and letters have been changed by addition or
+        removal, so to deliberately render its content nonsensical; it\'s not genuine, correct,
+        or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin,
+        it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K,
+        W, or Z, alien to latin, these, and others are often inserted randomly to mimic the
+        typographic appearance of European languages, as are digraphs not to be found in the original.
+        In a professional context it often happens that private or corporate clients coder a
+        publication to be made and presented with the actual content still not being ready.
+        Think of a news blog that\'s filled with content hourly on the day of going live.
+        However, reviewers tend to be distracted by comprehensible content, say, a random text
+        copied from a newspaper or the internet. The are likely to focus on the text,
+        disregarding the layout and its elements. Besides, random text risks to be unintended
+        humorous or offensive, an unacceptable risk in corporate environments.
+        Lorem ipsum and its many variants have been employed since the early 1960ies, and quite
+        likely since the sixteenth century.</string>
+
+    <string name="dummy_short">Lorem ipsum is a pseudo-Latin text used in web design,
+        typography, layout, and printing in place of English to emphasise design elements over
+        content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for
+        mock-ups. It helps to outline the visual elements of a document or presentation, eg
+        typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical
+        author and philosopher Cicero.</string>
+
+    <string name="sample_location">Current Location </string>
+    <string name="sample_status">3 Bookmarked Event </string>
+    <string name="title_activity_detail_events">DetailEventsActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Tetapan</string>
+    <string name="description_item">An ice cream that is made up from Sarawak original gula apong where it is very sweet and really delicious</string>
+    <string name="form_next">Seterusnya</string>
+    <string name="form_more_info1">Kurang maklumat lanjut sebelum meneruskan</string>
+    <string name="form_more_info">Bantu kami mengenali anda sedikit lagi</string>
+    <string name="form_address_line_1">Alamat Baris 1</string>
+    <string name="form_address_line_2">Alamat Baris 2</string>
+    <string name="form_mobile">Mobile No</string>
+    <string name="form_dob">Date of Birth</string>
+    <string name="form_city">City</string>
+    <string name="form_state">Negeri</string>
+    <string name="form_postcode">Postcode</string>
+    <string name="form_country">Negara</string>
+    <string name="form_gender">Jantina</string>
+    <string name="form_male">Lelaki</string>
+    <string name="form_female">Perempuan</string>
+    <string name="form_register_detail">Butiran Pendaftaran</string>
+    <string name="register_events_term">Saya bersetuju bahawa Pengurusan Acara boleh berkongsi maklumat saya dengan penganjur acara.</string>
+    <string name="title_marketplace">Marketplace</string>
+    <string name="info_event_label">Kategori</string>
+    <string name="btn_joined_events">JOINED</string>
+    <string name="btn_join_events">JOIN</string>
+    <string name="event_register_start">Permulaan pendaftaran</string>
+    <string name="pick_event_start_dateline">Tarikh permulaan pendaftaran</string>
+    <string name="event_register_end">Tamat Pendaftaran</string>
+    <string name="pick_event_end_dateline">Tarikh tamat pendaftaran</string>
+    <string name="info_title">Tajuk Maklumat</string>
+    <string name="info_desc">Butiran Maklumat</string>
+    <string name="extra_information">Butiran lain-lain</string>
+    <string name="information_venue">Lokasi maklumat</string>
+    <string name="pick_info_images">Sila pilih gambar anda</string>
+    <string name="pick_info_location">Sila pilih lokasi anda</string>
+    <string name="info_category">Kategori</string>
+    <string name="pick_info_category">Sila pilih kategori anda</string>
+    <string name="choose_posting_type">"Sili pilih "</string>
+    <string name="title_attendance">Kedatangan</string>
+    <string name="food">Makanan</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="home_stay">Home Stay</string>
+    <string name="label_no_attendance">Sila click Scan di bawah</string>
+
+</resources>

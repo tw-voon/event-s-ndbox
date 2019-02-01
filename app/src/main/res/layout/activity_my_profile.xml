@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_page"
+        tools:context=".profile.MyProfileActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/app_bar_layout">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/ToolBarStyle.Event"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="#ffffff"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginBottom="?android:attr/actionBarSize"
+            android:paddingBottom="?android:attr/actionBarSize"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border_top_bottom"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:id="@+id/username_section">
+
+                <TextView
+                    android:id="@+id/username_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/black_overlay"
+                    android:drawableEnd="@drawable/baseline_edit_black_18"
+                    android:text="@string/username"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/username"
+                    android:textSize="14sp"
+                    android:text="@string/username"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/username_section"
+                android:background="@drawable/border_bottom"
+                android:padding="10dp"
+                android:id="@+id/email_section">
+
+                <TextView
+                    android:id="@+id/email_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/black_overlay"
+                    android:text="@string/email"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email"
+                    android:textSize="14sp"
+                    android:text="@string/email"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/email_section"
+                android:background="@drawable/border_bottom"
+                android:padding="10dp"
+                android:id="@+id/password_section">
+
+                <TextView
+                    android:id="@+id/password_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/black_overlay"
+                    android:drawableEnd="@drawable/baseline_edit_black_18"
+                    android:text="@string/password"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/password"
+                    android:textSize="14sp"
+                    android:text="@string/password"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/password_section"
+                android:id="@+id/profile_label"
+                android:text="Your Information" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/profile_label"
+                android:background="@drawable/border_bottom"
+                android:padding="10dp"
+                android:id="@+id/dob_selection">
+
+                <TextView
+                    android:id="@+id/dob_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/black_overlay"
+                    android:drawableEnd="@drawable/baseline_edit_black_18"
+                    android:text="@string/form_dob"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dob_date"
+                    android:textSize="14sp"
+                    android:text="@string/form_dob"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/dob_selection"
+                android:background="@drawable/border_bottom"
+                android:padding="10dp"
+                android:id="@+id/gender_selection">
+
+                <TextView
+                    android:id="@+id/gender_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/black_overlay"
+                    android:drawableEnd="@drawable/baseline_edit_black_18"
+                    android:text="@string/form_gender"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/form_gender"
+                    android:textSize="14sp"
+                    android:text="@string/form_gender"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/dob_selection"
+                android:background="@drawable/border_bottom"
+                android:padding="10dp"
+                android:id="@+id/address_selection">
+
+                <TextView
+                    android:id="@+id/address_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/black_overlay"
+                    android:drawableEnd="@drawable/baseline_edit_black_18"
+                    android:text="Address"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/form_address_line_1"
+                    android:textSize="14sp"
+                    android:text="@string/form_address_line_1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/form_address_line_2"
+                    android:textSize="14sp"
+                    android:text="@string/form_address_line_2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11111, City"
+                    android:id="@+id/form_postcode_with_city"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State, Country"
+                    android:id="@+id/form_state_with_country"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.constraint.ConstraintLayout>

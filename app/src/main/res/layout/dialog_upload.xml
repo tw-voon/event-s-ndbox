@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kuchingitsolution.asus.eventmanagement.new_event.NewEventActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/upload_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/ic_file_upload_black_24dp"
+        android:contentDescription="@string/title_add_event"
+        android:layout_centerVertical="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/status_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/upload_image"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp">
+
+        <TextView
+            android:id="@+id/uploading_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/uploading_progress"
+            android:layout_centerVertical="true"
+            android:text=" /100%"/>
+
+        <ImageView
+            android:id="@+id/status_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_done_black_24dp"
+            android:foregroundGravity="right"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_below="@id/status_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/upload_image"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/uploading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="20dp"
+            android:maxHeight="20dp"
+            android:max="100"
+            android:indeterminate="false"
+            android:theme="@style/LinearProgress"
+            android:progress="5"
+            android:layout_gravity="center_vertical"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
