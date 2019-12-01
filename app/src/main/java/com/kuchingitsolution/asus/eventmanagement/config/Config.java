@@ -14,7 +14,8 @@ public class Config {
 
     /* TESTING LINK */
     private static String DOMAIN_URL = "http://eventsandbox.kuchingitsolution.net/admin/api/";
-    public  static String IMAGE_CATALOG = "http://eventsandbox.kuchingitsolution.net/admin/images/";
+    public static String IMAGE_CATALOG = "http://eventsandbox.kuchingitsolution.net/admin/images/";
+    public static String HOST_NAME = "eventsandbox.kuchingitsolution.net";
     public static String GET_ALLCATEGORY = DOMAIN_URL + "category";
     public static String GET_INFOCATEGORY = DOMAIN_URL + "info_category";
     public static String UPLOAD_NEW_EVENT = DOMAIN_URL + "new_event";
@@ -68,6 +69,7 @@ public class Config {
     public static String ATTENDEE_INFO = DOMAIN_URL + "attendee_info";
     public static String TAKE_ATTENDANCE = DOMAIN_URL + "attendance_event";
     public static String TAKE_EVENT_ATTENDANCE_DETAILS = DOMAIN_URL + "attendance_event_details";
+    public static String DISPLAY_FEEDBACK_FORM = DOMAIN_URL + "event_feedback";
 
     public static String CHAT_NOTIFICATION = "room_list";
 

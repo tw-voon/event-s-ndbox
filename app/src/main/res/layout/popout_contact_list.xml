@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
@@ -26,7 +26,7 @@
         android:textStyle="bold"
         android:text="Choose who to contact..." />
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/contact_list"
         app:layout_constraintTop_toBottomOf="@id/tv"
         android:layout_width="match_parent"
@@ -42,4 +42,4 @@
         android:textSize="16sp"
         android:textColor="@color/colorWhite" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

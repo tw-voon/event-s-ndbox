@@ -5,22 +5,18 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
+
+import androidx.fragment.app.Fragment;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -37,24 +33,17 @@ import com.kuchingitsolution.asus.eventmanagement.config.Config;
 import com.kuchingitsolution.asus.eventmanagement.config.Session;
 import com.kuchingitsolution.asus.eventmanagement.feed.CategoryFragment;
 import com.kuchingitsolution.asus.eventmanagement.feed.FeedFragment;
-import com.kuchingitsolution.asus.eventmanagement.feed.InfoCategoryFragment;
-import com.kuchingitsolution.asus.eventmanagement.feed.OptionEventFeedCallback;
 import com.kuchingitsolution.asus.eventmanagement.marketplace.MarketplaceMainActivity;
 import com.kuchingitsolution.asus.eventmanagement.message.MessageActivity;
 import com.kuchingitsolution.asus.eventmanagement.notification.NotificationFragment;
-import com.kuchingitsolution.asus.eventmanagement.profile.MyProfileActivity;
 import com.kuchingitsolution.asus.eventmanagement.profile.ProfileFragment;
 import com.kuchingitsolution.asus.eventmanagement.search.SearchActivity;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 //import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
 //import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
 import com.onesignal.OneSignal;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Locale;
 
 public class HomeActivity extends AppCompatActivity {
 

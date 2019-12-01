@@ -2,7 +2,7 @@ package com.kuchingitsolution.asus.eventmanagement.event_details;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
-import android.support.design.widget.BottomSheetDialogFragment;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import android.view.View;
 import android.widget.LinearLayout;
 

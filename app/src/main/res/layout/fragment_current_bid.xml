@@ -5,7 +5,7 @@
 
     <include layout="@layout/layout_current_bid_top" android:id="@+id/bidCurrentBid"/>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:id="@+id/currentBidRecyclerView"

@@ -1,0 +1,49 @@
+
+hsquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(•É—”ıÿÿÿÿ
+ksquid:S00100k"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´§şÏøÿÿÿÿ
+Vsquid:UselessImportCheck9"-Remove this unused import 'java.util.Locale'.(åğ×±ûÿÿÿÿ
+fsquid:S00100v"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îŒ’ï
+hsquid:CommentedOutCodeLineò"<This block of commented-out lines of code should be removed.(–“Åıÿÿÿÿ
+fsquid:S1192„"NDefine a constant instead of duplicating this literal "Result here: " 3 times.(›±í
+Csquid:S1068C"'Remove this unused "TAG" private field.(ÑÑ„üúÿÿÿÿ
+isquid:UselessImportCheck"ERemove this unused import 'android.graphics.drawable.BitmapDrawable'.(³Ï÷
+msquid:S1450>"VRemove the "toolbar" field and declare it as a local variable in the relevant methods.(ş®º—
+osquid:S00116C"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÑ„üúÿÿÿÿ
+gsquid:S00100Ù"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÅü‚
+squid:UselessImportCheck)"dRemove this unused import 'com.kuchingitsolution.asus.eventmanagement.feed.OptionEventFeedCallback'.(å´é™ÿÿÿÿÿ
+fsquid:S1192•"IDefine a constant instead of duplicating this literal "position" 4 times.(ÒĞÊÀşÿÿÿÿ
+]squid:UnusedPrivateMethodo"8Remove this unused private "setup_country_state" method.(Ï¸ÿÙ
+gsquid:CommentedOutCodeLiney"<This block of commented-out lines of code should be removed.(À¤Š¸úÿÿÿÿ
+hsquid:CommentedOutCodeLineƒ"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+csquid:CommentedOutCodeLineè"<This block of commented-out lines of code should be removed.(¢¯ğÄ
+qsquid:S00116B"TRename this field "form_data" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ“÷ğùÿÿÿÿ
+gsquid:S00100Í"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş‘÷
+jsquid:S00117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÈìÚ
+Q"squid:SwitchLastCaseIsDefaultCheckÜ""Add a default case to this switch.(¦¦¢†
+=squid:S1659C"!Declare "TAG" on a separate line.(ÑÑ„üúÿÿÿÿ
+dsquid:S1192l"HDefine a constant instead of duplicating this literal "user_id" 3 times.(Ôà™­øÿÿÿÿ
+osquid:S00117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±õËàùÿÿÿÿ
+asquid:UselessImportCheck"8Remove this unused import 'android.util.DisplayMetrics'.(Æ…Ú×ùÿÿÿÿ
+csquid:CommentedOutCodeLine…"<This block of commented-out lines of code should be removed.(ÍÚ˜
+`squid:S1192‡"HDefine a constant instead of duplicating this literal "success" 3 times.(ï·²Í
+gsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(†º×Èşÿÿÿÿ
+asquid:S1192“"IDefine a constant instead of duplicating this literal "event_id" 3 times.(ÒŠ¾×
+hsquid:CommentedOutCodeLine™"<This block of commented-out lines of code should be removed.(Àµ®ãüÿÿÿÿ
+jsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÏÚã
+bsquid:CommentedOutCodeLine—"<This block of commented-out lines of code should be removed.(­Î¦
+lsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§†‘÷ÿÿÿÿÿ
+gsquid:S00100Æ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ‡…Í
+…squid:UselessImportCheck-"aRemove this unused import 'com.kuchingitsolution.asus.eventmanagement.profile.MyProfileActivity'.(’Ùæß
+gsquid:UselessImportCheck">Remove this unused import 'android.content.res.Configuration'.(ßºÊƒûÿÿÿÿ
+^squid:UselessImportCheck	":Remove this unused import 'android.content.res.Resources'.(ÿÃÜó
+ksquid:S1192„"SDefine a constant instead of duplicating this literal "result from server" 3 times.(›±í
+fsquid:S00100o"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï¸ÿÙ
+Šsquid:UselessImportCheck("aRemove this unused import 'com.kuchingitsolution.asus.eventmanagement.feed.InfoCategoryFragment'.(ØÛæşÿÿÿÿ
+csquid:CommentedOutCodeLine±"<This block of commented-out lines of code should be removed.(ÇÓŸÉ
+hsquid:CommentedOutCodeLineÎ"<This block of commented-out lines of code should be removed.(‚Ø¯¯ûÿÿÿÿ
+gsquid:CommentedOutCodeLine}"<This block of commented-out lines of code should be removed.(¶ÄÄ¦ÿÿÿÿÿ
+gsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø„¶ç
+asquid:S4201ø"IRemove this unnecessary null check; "instanceof" returns false for nulls.(ŒÍòÏ
+ksquid:S00116C"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÑ„üúÿÿÿÿ
+V"squid:SwitchLastCaseIsDefaultCheckŞ""Add a default case to this switch.(¼œóÛüÿÿÿÿ
+gsquid:CommentedOutCodeLine{"<This block of commented-out lines of code should be removed.(¢‘Àúÿÿÿÿ

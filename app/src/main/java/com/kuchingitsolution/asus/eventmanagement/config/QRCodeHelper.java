@@ -2,7 +2,7 @@ package com.kuchingitsolution.asus.eventmanagement.config;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.annotation.IntRange;
+import androidx.annotation.IntRange;
 import android.util.Log;
 
 import com.google.zxing.BarcodeFormat;

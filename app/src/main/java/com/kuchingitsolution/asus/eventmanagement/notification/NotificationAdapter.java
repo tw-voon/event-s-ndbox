@@ -3,8 +3,8 @@ package com.kuchingitsolution.asus.eventmanagement.notification;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,11 +21,7 @@ import com.kuchingitsolution.asus.eventmanagement.event_details.DetailEventsActi
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
 
 public class NotificationAdapter  extends RecyclerView.Adapter<NotificationAdapter.MyViewHolder>{
 

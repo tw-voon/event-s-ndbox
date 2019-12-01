@@ -2,17 +2,18 @@ package com.kuchingitsolution.asus.eventmanagement.officer_task;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.kuchingitsolution.asus.eventmanagement.R;
 import com.kuchingitsolution.asus.eventmanagement.config.Config;
 import com.kuchingitsolution.asus.eventmanagement.event_details.DetailEventsActivity;
+import com.squareup.picasso.Picasso;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -25,7 +26,7 @@ public class OfficerTaskAdapter extends RecyclerView.Adapter<OfficerTaskAdapter.
     private Context context;
     private ArrayList<OfficerTaskModel> officerTaskModels;
 
-    OfficerTaskAdapter(Context context, ArrayList<OfficerTaskModel> officerTaskModels){
+    OfficerTaskAdapter(Context context, ArrayList<OfficerTaskModel> officerTaskModels) {
         this.context = context;
         this.officerTaskModels = officerTaskModels;
     }
@@ -58,10 +59,11 @@ public class OfficerTaskAdapter extends RecyclerView.Adapter<OfficerTaskAdapter.
 
         final OfficerTaskModel officerTaskModel = officerTaskModels.get(position);
 
-        Glide.with(context).load(Config.IMAGE_CATALOG + officerTaskModel.getEvent_cover()).skipMemoryCache(false).into(holder.events_covers);
+        Picasso.with(context).load(Config.IMAGE_CATALOG + officerTaskModel.getEvent_cover()).into(holder.events_covers);
+        // Glide.with(context).load(Config.IMAGE_CATALOG + officerTaskModel.getEvent_cover()).skipMemoryCache(false).into(holder.events_covers);
         holder.events_title.setText(officerTaskModel.getTitle());
 
-        if(officerTaskModel.getStatus() == 1){
+        if (officerTaskModel.getStatus() == 1) {
             holder.events_status.setText("ONGOING");
         } else {
             holder.events_status.setText("COMPLETED");
@@ -80,7 +82,7 @@ public class OfficerTaskAdapter extends RecyclerView.Adapter<OfficerTaskAdapter.
         });
     }
 
-    private String get_date(String time){
+    private String get_date(String time) {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat(
                 "yyyy-MM-dd HH:mm:ss", Locale.getDefault());

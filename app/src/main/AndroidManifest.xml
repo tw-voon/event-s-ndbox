@@ -22,22 +22,23 @@
     <application
         android:name=".EventManagementApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher_2"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:hardwareAccelerated="true"
         android:usesCleartextTraffic="true"
         tools:replace="android:icon"
         tools:targetApi="m">
+        <activity android:name=".feedback_manager.FeedbackFormActivity"></activity>
         <activity android:name=".event_attendees.TakeAttendanceActivity" />
         <activity
             android:name=".event_details.TicketActivity"
             android:theme="@style/AppTheme.TransparentWindow" />
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="com.kuchingitsolution.asus.eventmanagement.provider"
             android:exported="false"
             android:grantUriPermissions="true">

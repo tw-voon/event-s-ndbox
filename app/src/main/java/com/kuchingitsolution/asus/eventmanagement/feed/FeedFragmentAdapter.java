@@ -2,7 +2,6 @@ package com.kuchingitsolution.asus.eventmanagement.feed;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,30 +11,26 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.kuchingitsolution.asus.eventmanagement.HomeActivity;
 import com.kuchingitsolution.asus.eventmanagement.R;
 import com.kuchingitsolution.asus.eventmanagement.config.Config;
 import com.kuchingitsolution.asus.eventmanagement.config.Helper;
-import com.kuchingitsolution.asus.eventmanagement.config.Session;
 import com.kuchingitsolution.asus.eventmanagement.event_details.DetailEventsActivity;
-import com.kuchingitsolution.asus.eventmanagement.my_event.MyEventModel;
+import com.squareup.picasso.Picasso;
 import com.wang.avi.AVLoadingIndicatorView;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
 
 import static android.view.View.GONE;
 
-public class FeedFragmentAdapter extends RecyclerView.Adapter<FeedFragmentAdapter.MyViewHolder>{
+public class FeedFragmentAdapter extends RecyclerView.Adapter<FeedFragmentAdapter.MyViewHolder> {
 
     private ArrayList<FeedModel> event_list = new ArrayList<>();
     public Context context;
 
-    public FeedFragmentAdapter(Context context, ArrayList<FeedModel> event_list){
+    public FeedFragmentAdapter(Context context, ArrayList<FeedModel> event_list) {
         this.event_list = event_list;
         this.context = context;
     }
@@ -88,19 +83,20 @@ public class FeedFragmentAdapter extends RecyclerView.Adapter<FeedFragmentAdapte
         String event_time = String.format("%S - %S", Helper.get_time(events.getStart_time()), Helper.get_time(events.getEnd_time()));
         holder.timestamp.setText(event_time);
 
-        Glide.with(context).load(Config.IMAGE_CATALOG + events.getLink())
+        Picasso.with(context).load(Config.IMAGE_CATALOG + events.getLink()).into(holder.event_cover);
+        /*Glide.with(context).load(Config.IMAGE_CATALOG + events.getLink())
                 .fitCenter()
                 .crossFade(1000)
-                .into(holder.event_cover);
+                .into(holder.event_cover);*/
 
-        if(events.getSupport() > 0){
+        if (events.getSupport() > 0) {
             holder.like_logo.setImageResource(R.drawable.ic_favorite_border_black_16dp);
             holder.like_no.setText(String.format("%S", events.getSupport()));
         } else {
             holder.like_no.setText("0");
         }
 
-        if(events.getSupport_this() == 1){
+        if (events.getSupport_this() == 1) {
             holder.like_logo.setImageResource(R.drawable.ic_favorite_white_18dp);
         }
 

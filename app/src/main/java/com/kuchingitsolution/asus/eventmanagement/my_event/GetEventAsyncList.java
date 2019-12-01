@@ -1,16 +1,13 @@
 package com.kuchingitsolution.asus.eventmanagement.my_event;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v4.content.LocalBroadcastManager;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.kuchingitsolution.asus.eventmanagement.config.Api_post_get_method;
 import com.kuchingitsolution.asus.eventmanagement.config.Session;
-
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;

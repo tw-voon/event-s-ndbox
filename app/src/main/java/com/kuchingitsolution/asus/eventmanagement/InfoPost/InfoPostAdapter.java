@@ -2,7 +2,6 @@ package com.kuchingitsolution.asus.eventmanagement.InfoPost;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,13 +11,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.kuchingitsolution.asus.eventmanagement.R;
 import com.kuchingitsolution.asus.eventmanagement.config.Config;
 import com.kuchingitsolution.asus.eventmanagement.config.Session;
 import com.kuchingitsolution.asus.eventmanagement.event_details.DetailEventsActivity;
-import com.kuchingitsolution.asus.eventmanagement.feed.FeedFragmentAdapter;
 import com.kuchingitsolution.asus.eventmanagement.feed.FeedModel;
+import com.squareup.picasso.Picasso;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.text.ParseException;
@@ -91,10 +91,11 @@ public class InfoPostAdapter extends RecyclerView.Adapter<InfoPostAdapter.MyView
         //holder.timestamp.setText(event_time);
         holder.timestamp.setVisibility(GONE);
 
-        Glide.with(context).load(Config.IMAGE_CATALOG + events.getLink())
+        Picasso.with(context).load(Config.IMAGE_CATALOG + events.getLink()).into(holder.event_cover);
+        /*Glide.with(context).load(Config.IMAGE_CATALOG + events.getLink())
                 .fitCenter()
                 .crossFade(1000)
-                .into(holder.event_cover);
+                .into(holder.event_cover);*/
 
         if(events.getSupport() > 0){
             holder.like_logo.setImageResource(R.drawable.ic_favorite_border_black_16dp);

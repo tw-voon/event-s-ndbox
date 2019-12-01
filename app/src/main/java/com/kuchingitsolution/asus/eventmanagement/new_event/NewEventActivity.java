@@ -4,25 +4,13 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Matrix;
-import android.graphics.Paint;
-import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.FileProvider;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -39,31 +27,31 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.FileProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlacePicker;
+import com.google.android.material.snackbar.Snackbar;
 import com.kuchingitsolution.asus.eventmanagement.HomeActivity;
 import com.kuchingitsolution.asus.eventmanagement.R;
 import com.kuchingitsolution.asus.eventmanagement.config.Config;
 import com.kuchingitsolution.asus.eventmanagement.config.ImageCompressionUtils;
 import com.kuchingitsolution.asus.eventmanagement.config.Utility;
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
-import com.google.android.gms.common.GooglePlayServicesRepairableException;
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.ui.PlacePicker;
+import com.squareup.picasso.Picasso;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONStringer;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -71,14 +59,14 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class NewEventActivity extends AppCompatActivity implements OpenCameraInterface{
+public class NewEventActivity extends AppCompatActivity implements OpenCameraInterface {
 
     private Toolbar toolbar;
     private LinearLayout pick_category, pick_start_time, pick_end_time, pick_register_start_time, pick_register_end_time, pick_registration_section, pick_location;
     private RecyclerView image_row;
     private TextView event_title, event_desc, event_extra_info, selected_category, start_datetime, end_datetime, at_location, register_start_time, register_end_time;
     private ImageView location_preview;
-    private static int SELECT_CATEGORY_CODE = 1001,REQUEST_CAMERA = 126, PICK_IMAGE_REQUEST = 127, PLACE_PICKER = 128;
+    private static int SELECT_CATEGORY_CODE = 1001, REQUEST_CAMERA = 126, PICK_IMAGE_REQUEST = 127, PLACE_PICKER = 128;
     private static String EVENT_REGISTRATION = "event_registration", EVENT_TIME = "event_time";
     private int image_position;
     private JSONObject data = new JSONObject();
@@ -106,7 +94,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
@@ -116,7 +104,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
 
     }
 
-    private void setup_view_element(){
+    private void setup_view_element() {
 
         // Linear layout section
         pick_category = findViewById(R.id.pick_category);
@@ -151,7 +139,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         image_row = findViewById(R.id.image_row);
         // configure the image container
         image_row = findViewById(R.id.image_row);
-        imageContainerAdapter = new ImageContainerAdapter(this,imageModels);
+        imageContainerAdapter = new ImageContainerAdapter(this, imageModels);
         image_row.setAdapter(imageContainerAdapter);
         image_row.setLayoutManager(linearLayoutManager);
         add_default_image();
@@ -159,13 +147,13 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
     }
 
     // add default image container to load in new captured image
-    private void add_default_image(){
-        ImageModel defaults = new ImageModel("","", "");
+    private void add_default_image() {
+        ImageModel defaults = new ImageModel("", "", "");
         imageModels.add(defaults);
         imageContainerAdapter.notifyDataSetChanged();
     }
 
-    private void setup_element_listener(){
+    private void setup_element_listener() {
 
         pick_category.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -214,11 +202,11 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
     }
 
     public void selectLocation() {
-        boolean result= Utility.checklocationPermission(NewEventActivity.this);
+        boolean result = Utility.checklocationPermission(NewEventActivity.this);
         PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
         Intent intent;
         try {
-            if(result){
+            if (result) {
                 intent = builder.build(NewEventActivity.this);
                 startActivityForResult(intent, PLACE_PICKER);
             }
@@ -231,20 +219,20 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
 
     /* Select camera or image from gallery */
     public void selectImage() {
-        final CharSequence[] items = { getString(R.string.take_photo), getString(R.string.gallery),
-                getString(R.string.cancel) };
+        final CharSequence[] items = {getString(R.string.take_photo), getString(R.string.gallery),
+                getString(R.string.cancel)};
         AlertDialog.Builder builder = new AlertDialog.Builder(NewEventActivity.this);
         builder.setTitle(R.string.add_photo);
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
-                boolean result= Utility.check_camera_permission(NewEventActivity.this);
+                boolean result = Utility.check_camera_permission(NewEventActivity.this);
                 boolean write_external = Utility.check_write_external_permission(NewEventActivity.this);
                 if (items[item].equals(getString(R.string.take_photo))) {
-                    if(result && write_external)
+                    if (result && write_external)
                         cameraIntent();
                 } else if (items[item].equals(getString(R.string.gallery))) {
-                    if(result)
+                    if (result)
                         galleryIntent();
                 } else if (items[item].equals(getString(R.string.cancel))) {
                     dialog.dismiss();
@@ -256,10 +244,10 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         builder.show();
     }
 
-    private void cameraIntent(){
+    private void cameraIntent() {
 
         Intent intent;
-        if(Build.VERSION.SDK_INT  < 24) {
+        if (Build.VERSION.SDK_INT < 24) {
             intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
             tempImgFile = Uri.fromFile(createImageFile());
         } else {
@@ -279,7 +267,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         File storageDir = Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES + "/Event Management");
 
-        if(!storageDir.exists())
+        if (!storageDir.exists())
             storageDir.mkdirs();
 
         File images = null;
@@ -296,13 +284,13 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         return images;
     }
 
-    private static File getOutputMediaFile(){
+    private static File getOutputMediaFile() {
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES), "Event Management");
 
-        if (!mediaStorageDir.exists()){
+        if (!mediaStorageDir.exists()) {
             boolean is_dir_make = mediaStorageDir.mkdirs();
-            if (!is_dir_make){
+            if (!is_dir_make) {
                 Log.d("error", "null thing");
                 return null;
             }
@@ -310,17 +298,17 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
 
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.ENGLISH).format(new Date());
         return new File(mediaStorageDir.getPath() + File.separator +
-                "IMG_"+ timeStamp + ".jpg");
+                "IMG_" + timeStamp + ".jpg");
     }
 
-    private void galleryIntent(){
+    private void galleryIntent() {
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, false);
-        startActivityForResult(Intent.createChooser(intent, "Select File"),PICK_IMAGE_REQUEST);
+        startActivityForResult(Intent.createChooser(intent, "Select File"), PICK_IMAGE_REQUEST);
     }
 
-    public void pickDate(final String type, final String action){
+    public void pickDate(final String type, final String action) {
 
         // Get Current Date
         final Calendar c = Calendar.getInstance();
@@ -346,7 +334,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
 
     }
 
-    private void pickTime(final String type, final String action){
+    private void pickTime(final String type, final String action) {
         // Get Current Time
         final Calendar c = Calendar.getInstance();
         int mHour = c.get(Calendar.HOUR_OF_DAY);
@@ -359,13 +347,13 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 
-                        if(minute == 0)
-                            temp_dates = temp_dates+" "+hourOfDay + ":00";
+                        if (minute == 0)
+                            temp_dates = temp_dates + " " + hourOfDay + ":00";
                         else
-                            temp_dates = temp_dates +" "+ hourOfDay + ":" + minute;
+                            temp_dates = temp_dates + " " + hourOfDay + ":" + minute;
 
-                        if(action.equals(EVENT_TIME)){
-                            if(type.equals("start")){
+                        if (action.equals(EVENT_TIME)) {
+                            if (type.equals("start")) {
                                 generate_time_display(start_datetime, "start_datetime");
 //                                start_datetime.setText(temp_dates);
 //                                generate_content("start_datetime", temp_dates);
@@ -375,7 +363,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
 //                                generate_content("end_datetime", temp_dates);
                             }
                         } else {
-                            if(type.equals("start")){
+                            if (type.equals("start")) {
                                 generate_time_display(register_start_time, "register_start_time");
 //                                start_datetime.setText(temp_dates);
 //                                generate_content("start_datetime", temp_dates);
@@ -392,18 +380,18 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         timePickerDialog.show();
     }
 
-    private void generate_time_display(TextView timing, String form_key){
+    private void generate_time_display(TextView timing, String form_key) {
         timing.setText(temp_dates);
         generate_content(form_key, temp_dates);
 
-        if(data.has("start_datetime") && data.has("end_datetime")){
+        if (data.has("start_datetime") && data.has("end_datetime")) {
             pick_registration_section.setVisibility(View.VISIBLE);
         } else {
             pick_registration_section.setVisibility(View.GONE);
         }
     }
 
-    private void generate_content(String key, String value){
+    private void generate_content(String key, String value) {
 
         try {
             data.put(key, value);
@@ -414,10 +402,13 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
 
     }
 
-    private JSONObject getData(){
+    private JSONObject getData() {
         return this.data;
     }
-    private String get_single_data(String key) { return data.optString(key); }
+
+    private String get_single_data(String key) {
+        return data.optString(key);
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -455,16 +446,15 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
             String imagePath;
             Bitmap selectedImage = null;
 
-            if(Build.VERSION.SDK_INT> 23) {
+            if (Build.VERSION.SDK_INT > 23) {
                 try {
                     selectedImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), tempImgFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }
-            else
+            } else
                 selectedImage = BitmapFactory.decodeFile(path);
-             imagePath = imageCompressionUtils.saveImage(selectedImage, this);
+            imagePath = imageCompressionUtils.saveImage(selectedImage, this);
 //            String imagePath = imageCompressionUtils.compressImage(tempImgFile);
             Log.d("TAG", "File Saved::--->" + tempImgFile.getPath());
 
@@ -472,7 +462,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
             imageModels.get(image_position).setImage_uri("");
             imageContainerAdapter.notifyDataSetChanged();
 
-            if(image_position + 1 >= imageContainerAdapter.getItemCount() || imageContainerAdapter.getItemCount() == 1)
+            if (image_position + 1 >= imageContainerAdapter.getItemCount() || imageContainerAdapter.getItemCount() == 1)
                 add_default_image();
         }
 
@@ -482,14 +472,25 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
             imageModels.get(image_position).setPath(path);
             imageContainerAdapter.notifyDataSetChanged();
 
-            if(image_position + 1 >= imageContainerAdapter.getItemCount() || imageContainerAdapter.getItemCount() == 1)
+            if (image_position + 1 >= imageContainerAdapter.getItemCount() || imageContainerAdapter.getItemCount() == 1)
                 add_default_image();
         }
     }
 
-    private void getGoogleStaticMap(String latitute, String longitute){
+    private void getGoogleStaticMap(String latitute, String longitute) {
 
-        Glide.with(this)
+        Picasso.with(this).load(getStaticMap(latitute, longitute)).into(location_preview, new com.squareup.picasso.Callback() {
+            @Override
+            public void onSuccess() {
+
+            }
+
+            @Override
+            public void onError() {
+                avi.hide();
+            }
+        });
+        /*Glide.with(this)
             .load(getStaticMap(latitute, longitute))
                 .listener(new RequestListener<String, GlideDrawable>() {
                     @Override
@@ -504,16 +505,16 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
                     }
                 })
                 .skipMemoryCache(false)
-                .into(location_preview);
+                .into(location_preview);*/
 
         location_preview.setVisibility(View.VISIBLE);
 
     }
 
-    private String getStaticMap(String lat, String lon){
+    private String getStaticMap(String lat, String lon) {
         return "http://maps.google.com/maps/api/staticmap?center="
-                + lat + "," + lon+"&markers=icon:http://tinyurl.com/2ftvtt6%7C"+ lat +"," + lon
-                +"&zoom=16&size=400x400&sensor=false&key=AIzaSyA4KRaLDjefODrcg1zFXVS2RhB54vetOx8";
+                + lat + "," + lon + "&markers=icon:http://tinyurl.com/2ftvtt6%7C" + lat + "," + lon
+                + "&zoom=16&size=400x400&sensor=false&key=AIzaSyA4KRaLDjefODrcg1zFXVS2RhB54vetOx8";
     }
 
 
@@ -533,7 +534,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
             case R.id.submit:
                 hideSoftKeyboard();
                 menuitem.setEnabled(false);
-                if(gathering_info()) {
+                if (gathering_info()) {
                     Log.d("result", getData().toString());
                     UploadEvent uploadEvent = new UploadEvent(NewEventActivity.this, getData(), imageModels);
                     uploadEvent.execute(Config.UPLOAD_NEW_EVENT);
@@ -550,11 +551,11 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
 
     }
 
-    private boolean gathering_info(){
+    private boolean gathering_info() {
 
         // collect event title
         String title = event_title.getText().toString().trim();
-        if(title.isEmpty()){
+        if (title.isEmpty()) {
             display_status("Event title is required");
             return false;
         } else {
@@ -562,7 +563,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         }
         // collect event desc
         String desc = event_desc.getText().toString().trim();
-        if(desc.isEmpty()){
+        if (desc.isEmpty()) {
             display_status("Description is required");
             return false;
         } else {
@@ -570,48 +571,48 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         }
         // collect event extra info
         String ex_info = event_extra_info.getText().toString().trim();
-        if(!ex_info.isEmpty()){
+        if (!ex_info.isEmpty()) {
             generate_content("extra_info", ex_info);
         }
 
         // collect event category
-        if(get_single_data("category_id").isEmpty()){
+        if (get_single_data("category_id").isEmpty()) {
             display_status("Please select one category...");
             return false;
         }
 
         // collect event start time
-        if(get_single_data("start_datetime").isEmpty()){
+        if (get_single_data("start_datetime").isEmpty()) {
             display_status("Please set event start time...");
             return false;
         }
 
         // collect event end time
-        if(get_single_data("end_datetime").isEmpty()){
+        if (get_single_data("end_datetime").isEmpty()) {
             display_status("Please set event end time...");
             return false;
         }
 
         // collect event registration start time
-        if(get_single_data("register_start_time").isEmpty()){
+        if (get_single_data("register_start_time").isEmpty()) {
             display_status("Please set event register start time");
             return false;
         }
 
         // collect event registration end time
-        if(get_single_data("register_end_time").isEmpty()){
+        if (get_single_data("register_end_time").isEmpty()) {
             display_status("Please set event register end time");
             return false;
         }
 
         // collect event image
-        if(imageModels.size() == 0 || imageModels.get(0).getPath().isEmpty()){
+        if (imageModels.size() == 0 || imageModels.get(0).getPath().isEmpty()) {
             display_status("Please attach one image...");
             return false;
         }
 
         // collect event venue
-        if(get_single_data("location_name").isEmpty()){
+        if (get_single_data("location_name").isEmpty()) {
             display_status("Please choose one location...");
             return false;
         }
@@ -621,13 +622,13 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
     }
 
     public void hideSoftKeyboard() {
-        if(getCurrentFocus()!=null) {
+        if (getCurrentFocus() != null) {
             InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
             inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
         }
     }
 
-    public void upload_start(){
+    public void upload_start() {
         alert = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dialog_upload, null);
@@ -642,18 +643,18 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         ad = alert.show();
     }
 
-    public void update_progress(Integer[] progress){
+    public void update_progress(Integer[] progress) {
         dialog_upload.setProgress(progress[0]);
         dialog_upload_status.setText(String.valueOf(progress[0]));
-        if(progress[0] == 100) {
+        if (progress[0] == 100) {
             status_done.setVisibility(View.VISIBLE);
             dialog_upload.setIndeterminate(true);
         }
     }
 
-    public void upload_done(String result){
+    public void upload_done(String result) {
         ad.dismiss();
-        if(result.equals("success")){
+        if (result.equals("success")) {
             Intent intent = new Intent(NewEventActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
@@ -663,7 +664,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         menuitem.setEnabled(true);
     }
 
-    private void showMessage(String message){
+    private void showMessage(String message) {
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(NewEventActivity.this);
         alertDialogBuilder.setMessage(message);
         alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -675,11 +676,11 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
         alertDialogBuilder.show();
     }
 
-    private void display_status(String message){
+    private void display_status(String message) {
         Snackbar snackbar = Snackbar
-                .make(findViewById(R.id.new_event), Html.fromHtml("<font color=\"#ffffff\">"+ message +"</font>"), Snackbar.LENGTH_LONG);
+                .make(findViewById(R.id.new_event), Html.fromHtml("<font color=\"#ffffff\">" + message + "</font>"), Snackbar.LENGTH_LONG);
         View snackBarView = snackbar.getView();
-        if(Build.VERSION.SDK_INT >= 23 )
+        if (Build.VERSION.SDK_INT >= 23)
             snackBarView.setBackgroundColor(getResources().getColor(R.color.mt_red, null));
         else
             snackBarView.setBackgroundColor(getResources().getColor(R.color.mt_red));
@@ -695,7 +696,7 @@ public class NewEventActivity extends AppCompatActivity implements OpenCameraInt
 
     @Override
     public void onImageCloseClicked(int position) {
-        if(imageContainerAdapter.getItemCount() > 1){
+        if (imageContainerAdapter.getItemCount() > 1) {
             imageModels.remove(position);
             imageContainerAdapter.notifyDataSetChanged();
         } else {

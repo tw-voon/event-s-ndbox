@@ -1,25 +1,18 @@
 package com.kuchingitsolution.asus.eventmanagement.config;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
 
-import com.kuchingitsolution.asus.eventmanagement.EventManagementApplication;
 import com.kuchingitsolution.asus.eventmanagement.HomeActivity;
 import com.kuchingitsolution.asus.eventmanagement.InfoPost.InfoPostActivity;
-import com.kuchingitsolution.asus.eventmanagement.R;
 import com.kuchingitsolution.asus.eventmanagement.apps_info.AppsInfoActivity;
 import com.kuchingitsolution.asus.eventmanagement.auth.ForgotPasswordActivity;
 import com.kuchingitsolution.asus.eventmanagement.auth.LoginActivity;
 import com.kuchingitsolution.asus.eventmanagement.auth.MoreInfoActivity;
 import com.kuchingitsolution.asus.eventmanagement.auth.RegisterActivity;
-import com.kuchingitsolution.asus.eventmanagement.config.Api_post_get_method;
-import com.kuchingitsolution.asus.eventmanagement.config.Config;
 import com.kuchingitsolution.asus.eventmanagement.event_attendees.ParticipantActivity;
 import com.kuchingitsolution.asus.eventmanagement.event_attendees.TakeAttendanceActivity;
 import com.kuchingitsolution.asus.eventmanagement.event_details.DetailEventsActivity;

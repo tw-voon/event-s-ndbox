@@ -7,15 +7,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.CalendarContract;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
@@ -50,11 +50,11 @@ import com.kuchingitsolution.asus.eventmanagement.config.Session;
 import com.kuchingitsolution.asus.eventmanagement.event_attendees.ParticipantActivity;
 import com.kuchingitsolution.asus.eventmanagement.event_attendees.TakeAttendanceActivity;
 import com.kuchingitsolution.asus.eventmanagement.event_vip.EventVipActivity;
+import com.kuchingitsolution.asus.eventmanagement.feedback_manager.FeedbackFormActivity;
 import com.kuchingitsolution.asus.eventmanagement.feedback_manager.FeedbackManagerActivity;
 import com.kuchingitsolution.asus.eventmanagement.map.ActivityViewOnMap;
 import com.kuchingitsolution.asus.eventmanagement.message.ChatActivity;
 import com.kuchingitsolution.asus.eventmanagement.new_event.EditEventActivity;
-import com.kuchingitsolution.asus.eventmanagement.new_event.NewEventActivity;
 import com.kuchingitsolution.asus.eventmanagement.officer.AssignOfficerActivity;
 import com.wang.avi.AVLoadingIndicatorView;
 
@@ -62,13 +62,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
 
 public class DetailEventsActivity extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, EventDetailsBottomSheet.OptionBottomSheetCallback, ContactListOptionCallback{
 
@@ -808,7 +804,8 @@ public class DetailEventsActivity extends AppCompatActivity implements BaseSlide
     @Override
     public void feedbackOnclick() {
         eventDetailsBottomSheet.dismiss();
-        show_feedback();
+        // show_feedback();
+        show_feedback_form();
     }
 
     @Override
@@ -882,6 +879,11 @@ public class DetailEventsActivity extends AppCompatActivity implements BaseSlide
                 }).build();
 
         ratingDialog.show();
+    }
+
+    private void show_feedback_form() {
+        Intent intent = new Intent(this, FeedbackFormActivity.class);
+        startActivity(intent);
     }
 
     private void send_feedback(String content){

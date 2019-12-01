@@ -1,14 +1,10 @@
 package com.kuchingitsolution.asus.eventmanagement.config;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.os.AsyncTask;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 
 import com.kuchingitsolution.asus.eventmanagement.new_event.CategoryActivity;
-
-import org.json.JSONObject;
 
 import java.io.IOException;
 

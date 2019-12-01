@@ -7,16 +7,15 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,25 +25,19 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
-import com.kuchingitsolution.asus.eventmanagement.HomeActivity;
 import com.kuchingitsolution.asus.eventmanagement.R;
 import com.kuchingitsolution.asus.eventmanagement.config.AppStatus;
 import com.kuchingitsolution.asus.eventmanagement.config.Config;
 import com.kuchingitsolution.asus.eventmanagement.config.DB;
 import com.kuchingitsolution.asus.eventmanagement.config.EndlessScrollListener;
-import com.kuchingitsolution.asus.eventmanagement.config.EndlessScrollListener2;
 import com.kuchingitsolution.asus.eventmanagement.config.Session;
-import com.kuchingitsolution.asus.eventmanagement.my_event.EventListAdapter;
 import com.kuchingitsolution.asus.eventmanagement.my_event.GetEventAsyncList;
-import com.kuchingitsolution.asus.eventmanagement.my_event.MyEventModel;
-import com.kuchingitsolution.asus.eventmanagement.search.SearchActivity;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener{

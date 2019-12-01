@@ -2,7 +2,6 @@ package com.kuchingitsolution.asus.eventmanagement.bookmark;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,19 +9,20 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.kuchingitsolution.asus.eventmanagement.R;
 import com.kuchingitsolution.asus.eventmanagement.config.Config;
 import com.kuchingitsolution.asus.eventmanagement.event_details.DetailEventsActivity;
+import com.squareup.picasso.Picasso;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
-public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.MyViewHolder>{
+public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.MyViewHolder> {
 
     private ArrayList<BookmarkModel> bookmarkModelList;
     private OptionBookmarkCallback optionBookmarkCallback;
@@ -45,7 +45,7 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.MyView
         }
     }
 
-    public BookmarkAdapter(Context context, ArrayList<BookmarkModel> bookmarkModelList){
+    public BookmarkAdapter(Context context, ArrayList<BookmarkModel> bookmarkModelList) {
         this.context = context;
         this.bookmarkModelList = bookmarkModelList;
         this.optionBookmarkCallback = ((OptionBookmarkCallback) context);
@@ -63,14 +63,15 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.MyView
 
         final BookmarkModel bookmarkModel = bookmarkModelList.get(position);
 
-        Glide.with(context).load(Config.IMAGE_CATALOG + bookmarkModel.getEvent_cover()).skipMemoryCache(false).into(holder.event_cover);
+        Picasso.with(context).load(Config.IMAGE_CATALOG + bookmarkModel.getEvent_cover()).into(holder.event_cover);
+        // Glide.with(context).load(Config.IMAGE_CATALOG + bookmarkModel.getEvent_cover()).skipMemoryCache(false).into(holder.event_cover);
         holder.title.setText(bookmarkModel.getTitle());
 
-        String event_duration = String.format("%S - %S", get_date(bookmarkModel.getStart_time()) , get_date(bookmarkModel.getEnd_time()));
+        String event_duration = String.format("%S - %S", get_date(bookmarkModel.getStart_time()), get_date(bookmarkModel.getEnd_time()));
         holder.time.setText(event_duration);
         holder.location.setText(bookmarkModel.getLocation());
 
-        if(bookmarkModel.getIs_bookmarked() == 1){
+        if (bookmarkModel.getIs_bookmarked() == 1) {
             holder.bookmark.setImageResource(R.drawable.ic_bookmark_black_24dp);
         }
 
@@ -92,7 +93,7 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.MyView
 
     }
 
-    private String get_date(String time){
+    private String get_date(String time) {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat(
                 "yyyy-MM-dd HH:mm:ss", Locale.getDefault());

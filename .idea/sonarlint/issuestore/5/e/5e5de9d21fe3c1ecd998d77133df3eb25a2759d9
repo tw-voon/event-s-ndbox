@@ -1,0 +1,45 @@
+
+gsquid:S00100×"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½¼™î
+nsquid:S001175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸúÕìÿÿÿÿÿ
+ssquid:S00116"[Rename this field "btn_unjoin_event" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅßÚà
+qsquid:S00116"YRename this field "assign_officer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅßÚà
+lsquid:S00116"TRename this field "user_join" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÑæî
+gsquid:S00100Õ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Ü¬
+Dsquid:S1659"-Declare "contact_officer" on a separate line.(ÅßÚà
+Csquid:S1659",Declare "assign_officer" on a separate line.(ÅßÚà
+lsquid:S00116"TRename this field "edit_post" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅßÚà
+vsquid:S00116"^Rename this field "btn_take_attendance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅßÚà
+ksquid:S00116"SRename this field "event_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÑæî
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓŞó»üÿÿÿÿ
+qsquid:S00116"YRename this field "event_feedback" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅßÚà
+rsquid:S00116"ZRename this field "contact_officer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅßÚà
+Hsquid:S1659"1Declare "btn_add_to_calender" on a separate line.(ÅßÚà
+lsquid:S00100°"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë“Ôüÿÿÿÿ
+qsquid:S00116"YRename this field "btn_invite_vip" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅßÚà
+Gsquid:S5411À"*Use the primitive boolean expression here.(üƒÎÿÿÿÿÿ
+nsquid:S00116"VRename this field "delete_post" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅßÚà
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓŞó»üÿÿÿÿ
+Hsquid:S14815",Remove this unused "user_id" local variable.(ŸúÕìÿÿÿÿÿ
+lsquid:S00100Ô"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ìäçüÿÿÿÿ
+Csquid:S1659",Declare "event_feedback" on a separate line.(ÅßÚà
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ó•Íşÿÿÿÿ
+P"squid:SwitchLastCaseIsDefaultCheck<""Add a default case to this switch.(ˆğ°™
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ó•Íşÿÿÿÿ
+vsquid:S00116"^Rename this field "btn_add_to_calender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅßÚà
+=squid:S1659"&Declare "owner_id" on a separate line.(ÜÑæî
+isquid:S001176"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì£¡È
+vsquid:S00116"^Rename this field "event_view_feedback" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅßÚà
+lsquid:S00100Ö"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’‰àÃúÿÿÿÿ
+Hsquid:S1659"1Declare "event_view_feedback" on a separate line.(ÅßÚà
+ksquid:S00116"SRename this field "owner_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÑæî
+>squid:S1659"'Declare "user_join" on a separate line.(ÜÑæî
+Wsquid:S18545";Remove this useless assignment to local variable "user_id".(ŸúÕìÿÿÿÿÿ
+ysquid:S1450"bRemove the "btn_add_to_calender" field and declare it as a local variable in the relevant methods.(ÅßÚà
+lsquid:S00100¹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷á¯œûÿÿÿÿ
+ksquid:S00100{"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óñıÿÿÿÿ
+gsquid:S00100Æ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¼ƒ¶
+bsquid:CommentedOutCodeLine~"<This block of commented-out lines of code should be removed.(­¿Ø
+Hsquid:S1659"1Declare "btn_take_attendance" on a separate line.(ÅßÚà
+@squid:S1659")Declare "delete_post" on a separate line.(ÅßÚà
+Csquid:S1659",Declare "btn_invite_vip" on a separate line.(ÅßÚà
+Esquid:S1659".Declare "btn_unjoin_event" on a separate line.(ÅßÚà

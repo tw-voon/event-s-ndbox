@@ -1,14 +1,12 @@
 package com.kuchingitsolution.asus.eventmanagement;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.squareup.picasso.Picasso;
 
 import uk.co.senab.photoview.PhotoView;
 
@@ -25,9 +23,20 @@ public class ImageFullScreenActivity extends AppCompatActivity {
         imageView = findViewById(R.id.fullscreen_image);
         loading = findViewById(R.id.loading_img);
 
-        if(getIntent() != null){
+        if (getIntent() != null) {
             String url = getIntent().getStringExtra("image");
-            Glide.with(ImageFullScreenActivity.this)
+            Picasso.with(this).load(url).into(imageView, new com.squareup.picasso.Callback() {
+                @Override
+                public void onSuccess() {
+
+                }
+
+                @Override
+                public void onError() {
+                    loading.setVisibility(View.GONE);
+                }
+            });
+            /*Glide.with(ImageFullScreenActivity.this)
                     .load(url)
                     .listener(new RequestListener<String, GlideDrawable>() {
                         @Override
@@ -42,7 +51,7 @@ public class ImageFullScreenActivity extends AppCompatActivity {
                         }
                     })
                     .skipMemoryCache(false)
-                    .into(imageView);
+                    .into(imageView);*/
         }
     }
 

@@ -6,10 +6,9 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
-import android.support.v7.app.AppCompatDelegate;
+import androidx.appcompat.app.AppCompatDelegate;
 import android.util.Log;
 
-import com.kuchingitsolution.asus.eventmanagement.config.CommonApiAsync;
 import com.kuchingitsolution.asus.eventmanagement.config.Session;
 import com.kuchingitsolution.asus.eventmanagement.notification.NotificationReceivedHandler;
 import com.kuchingitsolution.asus.eventmanagement.notification.OpenNotification;

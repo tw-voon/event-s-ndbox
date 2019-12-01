@@ -1,0 +1,133 @@
+
+dsquid:S1192¦"GDefine a constant instead of duplicating this literal "title" 11 times.(ğãÙÆúÿÿÿÿ
+qsquid:S00116N"TRename this field "user_join" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûªß„ıÿÿÿÿ
+osquid:S00117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Ä‘şÿÿÿÿÿ
+osquid:S00117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òö¥’şÿÿÿÿ
+rsquid:S00116N"URename this field "host_label" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûªß„ıÿÿÿÿ
+isquid:S00117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¼ÿv
+Csquid:S1659N"'Declare "host_desc" on a separate line.(ûªß„ıÿÿÿÿ
+Csquid:S1659N"'Declare "host_name" on a separate line.(ûªß„ıÿÿÿÿ
+Bsquid:S1659N"&Declare "vip_join" on a separate line.(ûªß„ıÿÿÿÿ
+Esquid:S1659M")Declare "events_desc" on a separate line.(¾Éİûıÿÿÿÿ
+[squid:S1155á">Use isEmpty() to check whether the collection is empty or not.(Õóªóúÿÿÿÿ
+}squid:S1450c"aRemove the "is_completed_event" field and declare it as a local variable in the relevant methods.(¼—·Šøÿÿÿÿ
+lsquid:S00100Ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğˆìşüÿÿÿÿ
+lsquid:S00100á"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’’ó°úÿÿÿÿ
+osquid:S00117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÜÀüÿÿÿÿ
+Psquid:S1659N"4Declare "event_extra_info_label" on a separate line.(ûªß„ıÿÿÿÿ
+osquid:S00117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­³Òûÿÿÿÿ
+[squid:S1155†">Use isEmpty() to check whether the collection is empty or not.(Ğ—²—ıÿÿÿÿ
+jsquid:S00117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ÆÜ‘
+ssquid:S00116M"VRename this field "events_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Éİûıÿÿÿÿ
+hsquid:CommentedOutCodeLineĞ"<This block of commented-out lines of code should be removed.(‹õ£ûÿÿÿÿ
+osquid:S00117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ù£¦üÿÿÿÿ
+tsquid:S00116M"WRename this field "events_title" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Éİûıÿÿÿÿ
+=squid:S1659a"&Declare "bookmark" on a separate line.(ø¨ÍÛ
+gsquid:S00100ù"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î¾«Ÿ
+qsquid:S00116T"YRename this field "user_post_data" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø¿êë
+osquid:S00117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß­§ßúÿÿÿÿ
+osquid:S00117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡°ó«ûÿÿÿÿ
+isquid:S00117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õâš
+csquid:S1301–"KReplace this "switch" statement by "if" statements to increase readability.(ÜŸ•
+xsquid:S00116N"[Rename this field "event_extra_info" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûªß„ıÿÿÿÿ
+fsquid:S00100£"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì¤èJ
+jsquid:S00117ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ñ²
+Csquid:S1659N"'Declare "user_join" on a separate line.(ûªß„ıÿÿÿÿ
+osquid:S00117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•»ÜŠùÿÿÿÿ
+Hsquid:S1659N",Declare "event_comments" on a separate line.(ûªß„ıÿÿÿÿ
+qsquid:S00116L"TRename this field "form_data" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ“÷ğùÿÿÿÿ
+[squid:UselessImportCheckC"7Remove this unused import 'java.text.SimpleDateFormat'.(ú¡ÙÛ
+vsquid:S00116M"YRename this field "event_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Éİûıÿÿÿÿ
+wsquid:S00116["ZRename this field "comment_content" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÃŸ‹øÿÿÿÿ
+jsquid:S00117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÊœ¥
+Ysquid:S1854½"<Remove this useless assignment to local variable "event_id".(òö¥’şÿÿÿÿ
+csquid:CommentedOutCodeLineç"<This block of commented-out lines of code should be removed.(¥¿œ…
+Osquid:UselessImportCheckF"+Remove this unused import 'java.util.Date'.(¸…¼ü
+Esquid:S1481Ä"(Remove this unused "cal" local variable.(¿ÍÜŞüÿÿÿÿ
+zsquid:S00116c"]Rename this field "is_completed_event" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼—·Šøÿÿÿÿ
+jsquid:S00117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘•· 
+jsquid:S00117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÓÉ
+jsquid:S00117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á€’¶
+Usquid:S1155í">Use isEmpty() to check whether the collection is empty or not.(„çÔ
+psquid:S00116N"SRename this field "vip_join" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûªß„ıÿÿÿÿ
+Lsquid:S2864Ë"4Iterate over the "entrySet" instead of the "keySet".(•ûÊû
+lsquid:S00100ş"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ”ĞÙøÿÿÿÿ
+Esquid:S1659M")Declare "events_time" on a separate line.(¾Éİûıÿÿÿÿ
+^squid:S1192Æ"FDefine a constant instead of duplicating this literal "image" 5 times.(†òˆı
+wsquid:S00116P"ZRename this field "feedback_Window" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³±Úûÿÿÿÿ
+jsquid:S00117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ãò¼
+‹squid:UselessImportCheck:"bRemove this unused import 'com.kuchingitsolution.asus.eventmanagement.new_event.NewEventActivity'.(ÇÙı…úÿÿÿÿ
+lsquid:S00100ô"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¼ò¢ıÿÿÿÿ
+osquid:S00117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïºÿ¸şÿÿÿÿ
+Esquid:S1185û"(Remove this method to simply inherit it.(œƒƒ©ùÿÿÿÿ
+csquid:HiddenFieldCheck“"ARename "event_details" which hides the field declared at line 94.(õâš
+jsquid:S00117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ÁïŒ
+Dsquid:S1659N"(Declare "host_label" on a separate line.(ûªß„ıÿÿÿÿ
+Vsquid:UselessImportCheckH"-Remove this unused import 'java.util.Locale'.(åğ×±ûÿÿÿÿ
+jsquid:S00117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úó™Ï
+bsquid:S1192¨"JDefine a constant instead of duplicating this literal "user_join" 4 times.(á›£ò
+dsquid:S1192ª"LDefine a constant instead of duplicating this literal "attendee_id" 3 times.(Â„Øé
+_squid:S1192©"GDefine a constant instead of duplicating this literal "JOINED" 3 times.(œÍ«Ò
+jsquid:S3776Í"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(©îú
+lsquid:S00100ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«Û¶§ıÿÿÿÿ
+isquid:S1192§"LDefine a constant instead of duplicating this literal "description" 3 times.(ÇŞïãúÿÿÿÿ
+qsquid:S00116\"YRename this field "event_register" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰÷Áû
+nsquid:S00116S"VRename this field "event_media" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÌ®õ
+lsquid:S00100Ø"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßŒÕ£ùÿÿÿÿ
+gsquid:S00100ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À…¹
+gsquid:S00100â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïä–—
+dsquid:HiddenFieldCheckã"ARename "event_details" which hides the field declared at line 94.(—ñ²
+rsquid:S00116c"URename this field "event_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼—·Šøÿÿÿÿ
+fsquid:S1192™"IDefine a constant instead of duplicating this literal "bookmark" 3 times.(«ßüûøÿÿÿÿ
+osquid:S00117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß­§ßúÿÿÿÿ
+lsquid:S00100å"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íã¹áşÿÿÿÿ
+gsquid:S00100ß"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÄ¦¸
+`squid:S1192É"HDefine a constant instead of duplicating this literal "Confirm" 3 times.(çóä
+csquid:S1301í"KReplace this "switch" statement by "if" statements to increase readability.(›ˆò
+jsquid:S00117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éú¶
+Isquid:S1659P"-Declare "feedback_Window" on a separate line.(³±Úûÿÿÿÿ
+gsquid:S00100¢"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÿÂõ
+csquid:S1192Û"LDefine a constant instead of duplicating this literal "event_title" 5 times.(®ùô
+gsquid:S00100ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÓÉ
+vsquid:S2293¼"YReplace the type specification in this constructor call with the diamond operator ("<>").(”ã¾²ıÿÿÿÿ
+usquid:S1450c"YRemove the "event_type" field and declare it as a local variable in the relevant methods.(¼—·Šøÿÿÿÿ
+Jsquid:S1481½"-Remove this unused "event_id" local variable.(òö¥’şÿÿÿÿ
+fsquid:S1192î"IDefine a constant instead of duplicating this literal "owner_id" 3 times.(±»º˜ÿÿÿÿÿ
+osquid:S00117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³‚áüÿÿÿÿ
+Isquid:S1659M"-Declare "events_location" on a separate line.(¾Éİûıÿÿÿÿ
+@squid:S1659S")Declare "event_media" on a separate line.(ÓÌ®õ
+osquid:S00117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾à„¨ûÿÿÿÿ
+csquid:CommentedOutCodeLine»"<This block of commented-out lines of code should be removed.(’×ê
+lsquid:S00100Ò"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø‘°çùÿÿÿÿ
+Hsquid:S1659M",Declare "event_category" on a separate line.(¾Éİûıÿÿÿÿ
+gsquid:S00100º"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ïÕã
+Jsquid:S1659N".Declare "event_extra_info" on a separate line.(ûªß„ıÿÿÿÿ
+qsquid:S00116N"TRename this field "host_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûªß„ıÿÿÿÿ
+jsquid:S00117å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯èÒï
+gsquid:S00100Š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢æï
+Tsquid:S1854Ä"7Remove this useless assignment to local variable "cal".(¿ÍÜŞüÿÿÿÿ
+osquid:S00117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïºÿ¸şÿÿÿÿ
+Ysquid:UselessImportCheckB"5Remove this unused import 'java.text.ParseException'.(ñ®ï•
+vsquid:S00116N"YRename this field "event_comments" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûªß„ıÿÿÿÿ
+wsquid:S00116M"ZRename this field "events_location" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Éİûıÿÿÿÿ
+rsquid:S00116S"ZRename this field "comment_section" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÌ®õ
+osquid:S00117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ã¾²ıÿÿÿÿ
+Dsquid:S1659c"(Declare "event_type" on a separate line.(¼—·Šøÿÿÿÿ
+hsquid:CommentedOutCodeLine¤"<This block of commented-out lines of code should be removed.(ã¯¤äùÿÿÿÿ
+hsquid:CommentedOutCodeLine¦"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+Xsquid:UnusedPrivateMethodß"2Remove this unused private "show_feedback" method.(ëÄ¦¸
+~squid:S00116N"aRename this field "event_extra_info_label" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûªß„ıÿÿÿÿ
+jsquid:S00117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì·Ä›
+jsquid:S00117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨¢½Ê
+Q"squid:SwitchLastCaseIsDefaultCheckí""Add a default case to this switch.(›ˆò
+csquid:CommentedOutCodeLine¬"<This block of commented-out lines of code should be removed.(„†à
+Q"squid:SwitchLastCaseIsDefaultCheck–""Add a default case to this switch.(ÜŸ•
+fsquid:S1192~"JDefine a constant instead of duplicating this literal "event_id" 29 times.(Ë‹ÅŠüÿÿÿÿ
+qsquid:S00116N"TRename this field "host_desc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûªß„ıÿÿÿÿ
+osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ºªúÿÿÿÿ
+rsquid:S00116d"[Rename this field "is_open_register" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ›Û]
+jsquid:S00117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö„µÔ
+gsquid:S00100à"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä˜Íµ
+ssquid:S00116M"VRename this field "events_desc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Éİûıÿÿÿÿ
+psquid:S00116^"XRename this field "event_details" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø›¨³
+osquid:S3776“"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÿƒíşÿÿÿÿ

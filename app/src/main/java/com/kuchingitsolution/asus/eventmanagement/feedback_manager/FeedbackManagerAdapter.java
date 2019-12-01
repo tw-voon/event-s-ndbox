@@ -1,7 +1,7 @@
 package com.kuchingitsolution.asus.eventmanagement.feedback_manager;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +9,6 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.kuchingitsolution.asus.eventmanagement.R;
-import com.kuchingitsolution.asus.eventmanagement.config.Session;
 
 import java.util.ArrayList;
 

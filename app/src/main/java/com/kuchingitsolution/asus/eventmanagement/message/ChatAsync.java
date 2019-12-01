@@ -2,7 +2,7 @@ package com.kuchingitsolution.asus.eventmanagement.message;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
-import android.support.v4.content.LocalBroadcastManager;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.kuchingitsolution.asus.eventmanagement.config.Api_post_get_method;
